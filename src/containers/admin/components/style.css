@@ -1,0 +1,44 @@
+.cont-data{
+    width: 100%;
+    justify-content: center;
+    display: inline-flex;
+   
+}
+.container-uploadfile{
+    width: 100%;
+    text-align: center;
+    margin-top: 70px;
+   
+}
+.container-image{
+   margin: 0 auto;
+    width: 300px;
+    height:200px;
+    text-align: center;
+    
+}
+.cont-image-null{
+    margin: 0 auto;
+    width: 300px;
+    height:200px;
+    text-align: center;
+    border: 1px solid #555555;
+    border-radius: 5px;
+}
+
+.container-foto{
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.image{
+    width: 100%;
+   height: 100%;
+   border-radius: 5px;
+}
+
+.cont-guardarbtn{
+    width: 100%;
+    text-align: center;
+}
