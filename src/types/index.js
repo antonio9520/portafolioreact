@@ -16,3 +16,12 @@ export const EDITAR_ERROR = "EDITAR_ERROR";
 export const ELIMINAR_PROYECTO = "ELIMINAR_PROYECTO";
 export const ELIMINAR_EXITO = "ELIMINAR_EXITO";
 export const ELIMINAR_ERROR = "ELIMINAR_ERROR";
+
+export const LOGIN_EXITOSO = "LOGIN_EXITOSO";
+export const OBTENER_TOKEN = "OBTENER_TOKEN";
+export const LOGIN_ERROR = "LOGIN_ERROR";
+export const CERRAR_SESION = "CERRAR_SESION";
+
+
+
+

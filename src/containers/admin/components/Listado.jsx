@@ -9,7 +9,8 @@ const styles = makeStyles({
   root: {
     display: "flex",
     backgroundColor: "rgb(240, 240, 240)",
-    paddingBottom: "30px"
+    paddingBottom: "30px",
+    minHeight: "100vh"
   },
   item: {
     marginTop: "25px",

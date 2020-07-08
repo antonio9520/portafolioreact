@@ -3,7 +3,7 @@ import { Grid } from "@material-ui/core";
 import Layout from "../../components/Layout/Layout/Layout";
 import "./style.css";
 import Target from "./components/target/Target";
-import mountains from "../../resources/img/mountainsvectorial.svg"
+import mountains from "../../resources/img/mountains.jpg"
 import cloud1 from "../../resources/img/cloud1.png"
 import cloud2 from "../../resources/img/cloud2.png"
 import cloud3 from "../../resources/img/cloud3.png"

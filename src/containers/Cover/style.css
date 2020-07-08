@@ -43,17 +43,9 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  animation: saturateAnimation 8s infinite;
-  animation-direction: alternate;
+  
 }
-@keyframes saturateAnimation{
-  0%{
-    filter: saturate(0)
-  }
-  100%{
-    filter: saturate(3)
-  }
-}
+
 .cloud1 {
   position: absolute;
   z-index: 1000;

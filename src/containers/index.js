@@ -5,5 +5,6 @@ import Proyects from "./Proyects/Proyects";
 import Admin from "./admin/Admin"
 import About from "./about/About"
 import Contenido from "./contenido/Contenido"
+import Login from "./admin/components/login/Login"
 
-export { Cover, JobExperience, Knowledge, Proyects, Admin, Contenido, About };
+export { Cover, JobExperience, Knowledge, Proyects, Admin, Contenido, About, Login };

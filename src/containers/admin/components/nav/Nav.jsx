@@ -8,6 +8,8 @@ import {
   makeStyles,
 } from "@material-ui/core";
 import { useRouteMatch, useHistory } from "react-router-dom";
+import { cerrarSesionAction } from "../../../../actions/authAction";
+import { useDispatch } from "react-redux";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -22,6 +24,7 @@ const Nav = () => {
   let { url } = useRouteMatch();
   const history = useHistory();
   const classes = useStyles();
+  const dispatch = useDispatch();
 
   const goListado = () => {
     history.push(`${url}`);
@@ -29,6 +32,10 @@ const Nav = () => {
   const goNewProyect = () => {
     history.push(`${url}/new-proyect`);
   };
+  const cerrarSesion = () => {
+    dispatch(cerrarSesionAction())
+    history.push("/")
+  }
   return (
     <AppBar position="static">
       <Toolbar>
@@ -40,7 +47,7 @@ const Nav = () => {
           Nuevo Proyecto
         </Button>
 
-        <Button color="inherit">Cerrar Sesión</Button>
+        <Button onClick={cerrarSesion} color="inherit">Cerrar Sesión</Button>
       </Toolbar>
     </AppBar>
   );

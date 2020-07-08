@@ -1,0 +1,36 @@
+.container-login{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6D5, #23D5ab);
+    background-size: 200% 200%;
+    position: relative;
+    animation: change 10s ease-in-out infinite;
+    overflow: hidden;
+    padding: 30px 20px;
+}
+@keyframes change {
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+
+}
+.cont-form{
+   background-color: rgb(241, 241, 241);
+   border-radius: 5px;
+   box-shadow: 0 21px 18px -8px #000000;
+  
+}
+
+.grid-item{
+    padding: 10px 10px 20px 10px;
+    text-align: center;
+}
