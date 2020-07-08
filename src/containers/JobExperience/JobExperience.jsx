@@ -9,6 +9,7 @@ import { CSSTransition } from "react-transition-group";
 const JobExperience = () => {
   const [image, setImage] = useState();
   const [collapse, setCollapse] = useState(false);
+  
 
   const changeImage = (img) => {
     setImage(img);

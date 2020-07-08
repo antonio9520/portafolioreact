@@ -47,8 +47,8 @@ const CardProyect = ({ proyecto }) => {
           {nombre}
         </Typography>
         <div className="container-icons">  
-                  {lenguajes.map((lenguaje) => (
-          <LenguajeIcon lenguaje={lenguaje} />
+                  {lenguajes.map((lenguaje, i) => (
+          <LenguajeIcon key={i} lenguaje={lenguaje} />
         ))}
         </div>
         <div className='cont-arrow-collapse'>

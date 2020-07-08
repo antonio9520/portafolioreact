@@ -1,30 +1,53 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Typography, IconButton } from "@material-ui/core";
 import img from "../../../resources/img/duoc.jpg";
+import duoc2 from "../../../resources/img/duoc2.jpg";
+import duoc3 from "../../../resources/img/duoc3.jpg";
 import img2 from "../../../resources/img/laptop2.jpg";
 
 const CardArrow = (props) => {
-  const { title, sub1, year, sub2, body, icon, changeImage, id } = props;
+  const { title, sub1, year, sub2, body, icon, changeImage, id,  } = props;
 
   const [flip, setFlip] = useState(false);
 
   const handleButton = () => {
+    setFlip(true);
+    
     if (id === "school") {
       changeImage(img);
     } else if (id === "item") {
       changeImage(img2);
     }
-    setFlip(!flip);
+
+    setTimeout(() => {
+      if (id === "school"  ) {
+        changeImage(duoc2);
+      }
+    }, 10000);
+    setTimeout(() => {
+      if (id === "school"  ) {
+        changeImage(duoc3);
+      }
+    }, 20000);
+
+    // setTimeout(() => {
+    //   if () {
+    //     handleButton();
+    //   }
+    // }, 30000);
   };
   const handleLeave = () => {
-    setFlip(!flip);
+    setFlip(false);
     changeImage(null);
+   
   };
+ 
   return (
     <div
       className="container-card-arrow"
       onFocus={handleButton}
       onBlur={handleLeave}
+
     >
       <div className="section-top">
         {icon ? (

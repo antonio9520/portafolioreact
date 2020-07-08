@@ -58,7 +58,7 @@
 }
 
 .icon{
-  
+  margin-left: -20px;
   color: #fff;
    animation: iconAnimation 1s linear infinite;
    animation-direction: alternate; 

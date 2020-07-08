@@ -38,7 +38,7 @@ const Login = () => {
   };
   return (
     <Grid container justify="center" className="container-login">
-      <Grid item xs={12} sm={12} md={6}>
+      <Grid item xs={12} sm={8} md={6}>
         <form onSubmit={submitForm}>
           <Grid container justify="center" className="cont-form">
             <Grid item xs={12} sm={12} md={12} className="grid-item">
