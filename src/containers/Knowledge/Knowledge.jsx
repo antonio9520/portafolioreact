@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Knowledge.css";
 import img from "../../resources/img/books.jpg";
-import { Grid, Typography, IconButton } from "@material-ui/core";
+import { Grid, Typography, IconButton, Hidden } from "@material-ui/core";
 import Categories from "./components/categories";
 import KnowItem from "./components/KnowItem";
 import {
@@ -107,14 +107,16 @@ const Knowledge = () => {
             in={collapse}
             unmountOnExit
             timeout={2000}>
+              <Hidden smDown>
          <img className="img-know" src={img} alt="img-know"></img>
+         </Hidden>
       </CSSTransition>
 
       <div className="cont-body-know">
         <Grid container>
           <Grid item xs={12} sm={12} md={12}>
             <Typography className={collapse ? "title-know-active" : "title-know"} variant="h4">
-              Knowledge
+              Conocimientos
             </Typography>
             <div className={ collapse ? "show-btn-know-active" : "show-btn-know"}>
               <IconButton onClick={handleClick}>
@@ -138,30 +140,30 @@ const Knowledge = () => {
                   <Categories />
                 </div>
               </Grid>
-              <Grid item xs={12} sm={12} md={3} style={{ textAlign: "center" }}>
+              <Grid item xs={12} sm={6} md={3} style={{ textAlign: "center" }}>
                 <KnowItem
-                  title="Languages"
+                  title="Lenguajes"
                   icon={<Code className="icon-code" />}
                   list={languages}
                 />
               </Grid>
-              <Grid item xs={12} sm={12} md={3} style={{ textAlign: "center" }}>
+              <Grid item xs={12} sm={6} md={3} style={{ textAlign: "center" }}>
                 <KnowItem
                   title="Frameworks"
                   list={frameworks}
                   icon={<DeveloperBoard className="icon-code" />}
                 />
               </Grid>
-              <Grid item xs={12} sm={12} md={3} style={{ textAlign: "center" }}>
+              <Grid item xs={12} sm={6} md={3} style={{ textAlign: "center" }}>
                 <KnowItem
-                  title="Databases"
+                  title="Base de Datos"
                   list={databases}
                   icon={<Storage className="icon-code" />}
                 />
               </Grid>
-              <Grid item xs={12} sm={12} md={3} style={{ textAlign: "center" }}>
+              <Grid item xs={12} sm={6} md={3} style={{ textAlign: "center" }}>
                 <KnowItem
-                  title="Others"
+                  title="Otros"
                   list={others}
                   icon={<DeviceHub className="icon-code" />}
                 />

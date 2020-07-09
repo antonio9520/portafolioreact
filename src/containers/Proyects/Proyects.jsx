@@ -17,7 +17,7 @@ const Proyects = () => {
 
   return (
     <div className="container-proyects" id="proyects">
-      <Typography variant="h4" className="title-proyect">Proyects</Typography>
+      <Typography variant="h4" className="title-proyect">Demos</Typography>
       <Grid container>
         {proyectos.map((proyecto) => (
           <Grid item xs={12} sm={6} md={4} key={proyecto._id}>

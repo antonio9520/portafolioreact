@@ -1,11 +1,12 @@
 import React from "react";
 import "./style.css";
-import { Typography } from "@material-ui/core";
+import { Typography, Hidden } from "@material-ui/core";
 import { Link } from "react-scroll";
 
 const Header = () => {
   return (
     <>
+    <Hidden smDown>
       <div className="container-nav">
         <nav className="nav-primary">
           <ul>
@@ -19,7 +20,7 @@ const Header = () => {
               duration={500}
             >
               <Typography variant="h6" gutterBottom>
-                About Me
+                Sobre mi
               </Typography>
             </Link>
 
@@ -33,7 +34,7 @@ const Header = () => {
               duration={500}
             >
               <Typography variant="h6" gutterBottom>
-                Job’s Experience
+                Experiencia
               </Typography>
             </Link>
 
@@ -47,7 +48,7 @@ const Header = () => {
               duration={500}
             >
               <Typography variant="h6" gutterBottom>
-                Knowledge
+                Conocimientos
               </Typography>
             </Link>
 
@@ -61,12 +62,13 @@ const Header = () => {
               duration={500}
             >
               <Typography variant="h6" gutterBottom>
-                Projects
+                Demos
               </Typography>
             </Link>
           </ul>
         </nav>
       </div>
+      </Hidden>
     </>
   );
 };

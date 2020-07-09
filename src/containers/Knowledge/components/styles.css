@@ -1,7 +1,8 @@
 .cont-categories {
-  display: inline-flex;
+  display: inline-block;
   justify-content: center;
   width: 100%;
+  text-align: center;
 }
 .cont-categories-sub {
   display: inline-flex;

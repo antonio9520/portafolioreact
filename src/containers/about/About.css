@@ -2,6 +2,6 @@
     position: relative;
     width: 100%;
     min-height: 130vh;
-    background: rgb(65,59,147);
-    background: radial-gradient(circle, rgba(65,59,147,1) 0%, rgba(25,18,33,1) 100%);
+    background: rgb(121,74,162);
+    background: radial-gradient(circle, rgba(121,74,162,1) 0%, rgba(31,26,59,1) 100%);
 }

@@ -1,9 +1,11 @@
 import React from "react";
-import { Grid } from "@material-ui/core";
+import { Grid, Hidden } from "@material-ui/core";
 import Layout from "../../components/Layout/Layout/Layout";
 import "./style.css";
 import Target from "./components/target/Target";
 import mountains from "../../resources/img/mountains.jpg"
+import mountainsSm from "../../resources/img/mountainsSm.jpg"
+import mountainsXs from "../../resources/img/mountainsXs.jpg"
 import cloud1 from "../../resources/img/cloud1.png"
 import cloud2 from "../../resources/img/cloud2.png"
 import cloud3 from "../../resources/img/cloud3.png"
@@ -13,7 +15,15 @@ const Cover = () => {
   return (
     <>
       <Grid container className="body">
+        <Hidden smDown>
       <img className="img" alt="body" src={mountains}></img> 
+      </Hidden>
+      <Hidden only={["xs", "md", "lg"]}>
+      <img className="img" alt="body" src={mountainsSm}></img> 
+      </Hidden>
+      <Hidden smUp>
+      <img className="img" alt="body" src={mountainsXs}></img> 
+      </Hidden>
       <div className="moon"></div>
       <img className="cloud1" alt="nube1" src={cloud1}></img>
       <img className="cloud2" alt="nube1" src={cloud2}></img>

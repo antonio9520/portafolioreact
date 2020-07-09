@@ -1,38 +1,39 @@
 import React from "react";
-import { Typography, Avatar } from "@material-ui/core";
+import { Typography, Avatar, Grid } from "@material-ui/core";
 import "./styles.css"
 
 const categories = () => {
   return (
     <div className='cont-categories'>
       <div className="cont-categories-sub">
+        
         <Avatar className='avatar-expert'>E</Avatar>
         <Typography className="typo-body-know" variant="body1">
-          Expert
+          Experto
         </Typography>
       </div>
       <div className="cont-categories-sub">
       <Avatar className='avatar-advanced'>A</Avatar>
         <Typography className="typo-body-know" variant="body1">
-          Advanced
+          Avanzado
         </Typography>
       </div>
       <div className="cont-categories-sub"> 
       <Avatar className='avatar-int'>I</Avatar>
         <Typography className="typo-body-know" variant="body1">
-          Intermediate
+          Intermedio
         </Typography>
       </div>
       <div className="cont-categories-sub">
       <Avatar className='avatar-novice'>N</Avatar>
         <Typography className="typo-body-know" variant="body1">
-          Novice
+          Novato
         </Typography>
       </div>
       <div className="cont-categories-sub">
       <Avatar className='avatar-fund'>F</Avatar>
         <Typography className="typo-body-know" variant="body1">
-          Fundamental Awareness
+          Conocimientos Fundamentales
         </Typography>
       </div>
     </div>
