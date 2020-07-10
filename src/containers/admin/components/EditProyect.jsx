@@ -42,6 +42,7 @@ const EditProyect = () => {
   const [firebase, setFirebase] = useState(false);
   const [bt4, setBt4] = useState(false);
   const [mysql, setMysql] = useState(false);
+  const [mui, setMui] = useState(false);
   const [proyecto, setProyecto] = useState({
     nombre: "",
     descripcion: "",
@@ -105,6 +106,9 @@ const EditProyect = () => {
       }
       if (lenguajes[i] === "mysql") {
         setMysql(true);
+      }
+      if (lenguajes[i] === "mui") {
+        setMui(true);
       }
     }
   }, [proedit]);
@@ -368,6 +372,25 @@ const EditProyect = () => {
                         />
                       }
                       label="MySql"
+                    />
+                  </Grid>
+                  <Grid
+                    item
+                    xs={12}
+                    sm={6}
+                    md={2}
+                    className={classes.textfield}
+                  >
+                    <FormControlLabel
+                      control={
+                        <Checkbox
+                          name="mui"
+                          checked={mui}
+                          onChange={() => setMui(!mui)}
+                          onClick={() => handleCheck("mui")}
+                        />
+                      }
+                      label="Material"
                     />
                   </Grid>
                   <Grid

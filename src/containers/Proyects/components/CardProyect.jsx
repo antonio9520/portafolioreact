@@ -38,11 +38,11 @@ const CardProyect = ({ proyecto }) => {
 
   return (
     <div className="container-targetProyect">
-      <div className="cont-contenido">
+      <div className="cont-contenido-proyect">
         <div className="cont-img-card">
           <img className="img-targetProyect" src={imageURL} alt="imagen"></img>
         </div>
-        <div className="cont-typo">
+        <div className="cont-typo-proyect">
         <Typography className="name-proyect" variant="h5">
           {nombre}
         </Typography>
@@ -63,7 +63,7 @@ const CardProyect = ({ proyecto }) => {
           <ExpandMore />
         </IconButton>
         </div>
-        <div className="cont-descripcion">
+        <div className="cont-descripcion-proyect">
         <Collapse in={expanded} timeout="auto" unmountOnExit>
         <Typography variant="body2">{descripcion}</Typography>
         <div>

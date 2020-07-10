@@ -65,6 +65,7 @@
   padding-bottom: 30px;
   transform-style: preserve-3d;
   transition: all 0.8s ease;
+ 
 }
 
 .section-bottom {
@@ -139,6 +140,7 @@
   animation: fadeInFromNone 2s ease-out;
 
 }
+
 
 @-webkit-keyframes fadeInFromNone {
   0% {

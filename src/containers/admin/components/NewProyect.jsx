@@ -290,6 +290,23 @@ const NewProyect = () => {
                   <Grid
                     item
                     xs={12}
+                    sm={6}
+                    md={2}
+                    className={classes.textfield}
+                  >
+                    <FormControlLabel
+                      control={
+                        <Checkbox
+                          name="mui"
+                          onChange={() => handleCheck("mui")}
+                        />
+                      }
+                      label="Material"
+                    />
+                  </Grid>
+                  <Grid
+                    item
+                    xs={12}
                     sm={12}
                     md={6}
                     className={classes.textfield}

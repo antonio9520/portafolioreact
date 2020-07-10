@@ -10,6 +10,7 @@ import mongo from "../../../resources/icons/mongo.svg"
 import firebase from "../../../resources/icons/firebase.svg"
 import bt4 from "../../../resources/icons/bt4.png"
 import mysql from "../../../resources/icons/mysql.svg"
+import mui from "../../../resources/icons/mui.png"
 
 const LenguajeIcon = ({ lenguaje }) => {
   return (
@@ -17,7 +18,7 @@ const LenguajeIcon = ({ lenguaje }) => {
       {lenguaje === "html" ? (
         <img className="icon-leng" title='Html' src={html} alt="html"></img>
       ) : lenguaje === "js" ? (
-        <img className="icon-leng" title='JavaScript' src={js} alt="javascript"></img>
+        <img className="icon-leng-js" title='JavaScript' src={js} alt="javascript"></img>
       ) : lenguaje === "css" ? (
         <img className="icon-leng" title='Css3' src={css3} alt="css3"></img>
       ) : lenguaje === "node" ? (
@@ -25,7 +26,7 @@ const LenguajeIcon = ({ lenguaje }) => {
       ) : lenguaje === "react" ? (
         <img className="icon-leng" title='ReactJs' src={react} alt="ReactJs"></img>
       ) : lenguaje === "redux" ? (
-        <img className="icon-leng" title='Redux' src={redux} alt="NodeJs"></img>
+        <img className="icon-leng-redux" title='Redux' src={redux} alt="NodeJs"></img>
       ) : lenguaje === "mongo" ? (
         <img className="icon-leng" title='MongoDB' src={mongo} alt="MongoDB"></img>
       ) : lenguaje === "firebase" ? (
@@ -34,7 +35,9 @@ const LenguajeIcon = ({ lenguaje }) => {
         <img className="icon-leng" title='Bootstrap4' src={bt4} alt="Bootstrap4"></img>
       ) :lenguaje === "bt4" ? (
         <img className="icon-leng" title='MySql' src={mysql} alt="MySql"></img>
-      ) :(
+      ) :lenguaje === "mui" ? (
+        <img className="icon-leng" title='Material-ui' src={mui} alt="Material-ui"></img>
+      ) : (
         <p>{lenguaje}</p>
       )}
     </div>

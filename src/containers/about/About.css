@@ -1,41 +1,15 @@
-/* .container-about{
-    position: relative;
-    width: 100%;
-    min-height: 130vh;
-    background: rgb(121,74,162);
-    background: radial-gradient(circle, rgba(121,74,162,1) 0%, rgba(31,26,59,1) 100%);
-} */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
   
   .scene {
     position: relative;
     width: 100%;
-    height: 120vh;
+    min-height: 120vh;
     background: linear-gradient(#111425, #3751e0);
     background-attachment: fixed;
     overflow: hidden;
   }
-  .scene::before{
-    content: "";
-    position: absolute;
-    bottom: -100%;
-    left: 0;
-    width: 100%;
-    height: 250px;
-    transition: 0.5s;
-    background: linear-gradient(transparent, #fff, #2598f3);
-  }
-  .scene.active::before{
-    bottom: 0;
-  }
-  .scene.active {
-    background: linear-gradient(#ffeb3b, #ff9800);
-  }
+ 
+  
   
  .scene .moon-nigth {
     position: absolute;
@@ -60,7 +34,7 @@
     background: linear-gradient(#111425, #3751e0);
     background-attachment: fixed;
   }
-  .cont-typo{
+  .cont-typo-about{
       position: absolute;
       width: 400px;
       right: 30px;
@@ -83,9 +57,7 @@
     z-index: 100;
     transition: 0.5s;
   }
-  .scene.active .forest{
-    bottom: -100%;
-  }
+
   
   .scene i {
     position: absolute;
@@ -94,33 +66,7 @@
     animation: animate linear infinite;
   }
   
-  .scene.active i{
-    display: none;
-  }
-  
-  .bg{
-    position: absolute;
-    bottom: 0;
-    max-width: 100%;
-    transition: 0.5s;
-    z-index: 1000;
-    transform: translateY(100%)
-  }
-  
-  .scene.active .bg{
-    transform: translateY(0);
-  }
-  
-  
-  
-  @keyframes animateCloud {
-    0% {
-      transform: translateX(-100%) scale(1);
-    }
-    100% {
-      transform: translateX(400%) scale(1.5);
-    }
-  }
+ 
   
   @keyframes animate {
     0% {
@@ -137,9 +83,7 @@
     }
   }
   
-  img {
-    pointer-events: none;
-  }
+ 
 
   .scene .star{
     position: absolute;
@@ -148,3 +92,47 @@
     animation: animate  linear infinite;
     animation-duration: 5s;
   }
+
+  @media only screen and (max-width: 600px){
+    .scene .moon-nigth {
+      position: absolute;
+      top: 100px;
+      left: 100px;
+      width: 100px;
+      height: 100px;
+      background: #fff;
+      border-radius: 50%;
+      transition: 0.5s;
+      cursor: pointer;
+    }
+    
+    .cont-typo-about{
+      position: absolute;
+      width: 400px;
+      right: 30px;
+      top: 300px;
+      color: white
+  }
+  }
+
+  @media only screen and (min-width: 600px ) and (max-width: 960px){
+    .scene .moon-nigth {
+      position: absolute;
+      top: 100px;
+      left: 150px;
+      width: 100px;
+      height: 100px;
+      background: #fff;
+      border-radius: 50%;
+      transition: 0.5s;
+      cursor: pointer;
+    }
+    
+    .cont-typo-about{
+      position: absolute;
+      width: 400px;
+      right: 30px;
+      top: 250px;
+      color: white
+  }
+  } 

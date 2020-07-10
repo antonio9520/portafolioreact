@@ -7,32 +7,25 @@ import img2 from "../../../resources/img/laptop2.jpg";
 
 const CardArrow = (props) => {
   const { title, sub1, year, sub2, body, icon, changeImage, id, image } = props;
- 
+
   const [flip, setFlip] = useState(false);
-  
-let interval = null;
+
   const handleButton = () => {
     setFlip(!flip);
-    console.log(flip)
-    changeImage(img);
-  
-  console.log("handleButton")
-}
 
-  let contador = 0;
+    changeImage(); 
 
- 
+  };
+
   const handleLeave = () => {
     setFlip(!flip);
-    console.log(flip)
+
     changeImage(null);
   };
- 
 
   return (
     <div
       className="container-card-arrow "
-     
       onFocus={() => handleButton()}
       onBlur={handleLeave}
     >

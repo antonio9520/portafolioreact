@@ -11,7 +11,7 @@
     padding-bottom: 100px;
 }
 
-.cont-contenido {
+.cont-contenido-proyect {
   text-align: center;
   width: 80%;
   background-color: white;
@@ -46,8 +46,20 @@
     margin-top: 5px;
     border-radius: 50px;
 }
+.icon-leng-js{
+    width: 70%;
+    height: 70%;
+    margin-top: 7px;
+    border-radius: 50px;
+}
+.icon-leng-redux{
+    width: 60%;
+    height: 60%;
+    margin-top: 9px;
+    border-radius: 50px;
+}
 
-.cont-descripcion{
+.cont-descripcion-proyect{
     padding: 0 15px 10px 15px;
 }
 .cont-typo{

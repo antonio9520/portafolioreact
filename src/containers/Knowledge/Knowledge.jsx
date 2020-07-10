@@ -121,7 +121,7 @@ const Knowledge = () => {
             <div className={ collapse ? "show-btn-know-active" : "show-btn-know"}>
               <IconButton onClick={handleClick}>
                 {collapse ? (
-                  <VisibilityOff className="btn-show-job" />
+                  <VisibilityOff className="btn-show-job-off" />
                 ) : (
                   <Visibility className="btn-show-job" />
                 )}

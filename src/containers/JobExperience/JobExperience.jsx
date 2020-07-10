@@ -13,32 +13,31 @@ import CardExperience from "./mdUp/CardExperience";
 const JobExperience = () => {
   const [image, setImage] = useState();
   const [collapse, setCollapse] = useState(false);
-  let contador = 0;
   let interval = null;
-  const changeImage = (img) => {
-    setImage(img);
+  const [intervalId, setIntervalId] = useState({interval: interval})
+  let contador = 0;
+  
 
-    //   interval = setInterval(() =>  {
-    //      rotarImagen();
-    //   if(image === null){
-    //     clearInterval(interval);
-    //        interval = null;
-    //        console.log("interval")
-    //   }
-    //  },2000);
+  const changeImage = () => {
+    // setImage(img);
+       rotarImagen()
+       interval = setInterval(() =>  {
+          rotarImagen();
+      },3000);
   };
   const handleClick = () => {
     setCollapse(!collapse);
+    clearInterval(intervalId.interval)
+   
   };
 
-  //   const rotarImagen = () => {
+    const rotarImagen = () => {
+      let misImagenes = [img2, duoc2, duoc3];
+      setImage(misImagenes[contador]);
+      contador++;
+      if (contador === 3) contador = 0;
 
-  //     let misImagenes = [img2, duoc2, duoc3];
-  //     changeImage(misImagenes[contador]);
-  //     contador++;
-  //     if (contador === 3) contador = 0;
-
-  // };
+  };
 
   return (
     <Fragment>
@@ -58,7 +57,7 @@ const JobExperience = () => {
           <div className={collapse ? "cont-show-btn-active" : "cont-show-btn"}>
             <IconButton onClick={handleClick}>
               {collapse ? (
-                <VisibilityOff className="btn-show-job" />
+                <VisibilityOff className="btn-show-job-off" />
               ) : (
                 <Visibility className="btn-show-job" />
               )}
@@ -81,7 +80,7 @@ const JobExperience = () => {
                   <Grid item xs={2} sm={2} md={2}>
                     <CardArrow
                       id="school"
-                      changeImage={() => changeImage()}
+                      changeImage={changeImage}
                       icon={<School />}
                       image={image}
                       title="I.P. Duoc UC."

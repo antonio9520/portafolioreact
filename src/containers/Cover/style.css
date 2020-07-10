@@ -51,21 +51,21 @@
   z-index: 1000;
   left:0;
   max-width: 400px;
-  animation: animatecloud 80s linear infinite;
+  animation: animatecloud 160s linear infinite;
 }
 .cloud2 {
   position: absolute;
   z-index: 1000;
   left: 0;
   max-width: 400px;
-  animation: animatecloud 120s linear infinite;
+  animation: animatecloud 200s linear infinite;
 }
 .cloud3 {
   position: absolute;
   z-index: 1000;
   left: 0;
   max-width: 600px;
-  animation: animatecloud 180s linear infinite;
+  animation: animatecloud 250s linear infinite;
 }
 .cloud4 {
   position: absolute;
@@ -73,7 +73,7 @@
   left: 0;
   top: 200px;
   max-width: 200px;
-  animation: animatecloud 70s linear infinite;
+  animation: animatecloud 100s linear infinite;
   animation-delay: -20s;
 }
 .cloud5 {
@@ -82,7 +82,7 @@
   top: 50px;
   left: 0;
   max-width: 500px;
-  animation: animatecloud 60s linear infinite;
+  animation: animatecloud 120s linear infinite;
   animation-delay: -5s;
 }
 .cloud6 {
@@ -91,7 +91,7 @@
   top:75px;
   left: 0;
   max-width: 400px;
-  animation: animatecloud 50s linear infinite;
+  animation: animatecloud 100s linear infinite;
   animation-delay: -10s;
 }
 
