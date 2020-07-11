@@ -4,9 +4,23 @@
     position: relative;
     width: 100%;
     min-height: 120vh;
-    background: linear-gradient(#111425, #3751e0);
-    background-attachment: fixed;
+    /* background: linear-gradient(#000000, #0e1642);
+    background-attachment: fixed; */
+    background: url("../../resources//img/universe3.jpg");
+    background-size: cover;
     overflow: hidden;
+    animation: scale 10s linear infinite;
+    animation-direction: alternate;
+  }
+  @keyframes scale {
+    0% {
+     
+      filter: hue-rotate(0);
+    }
+    100%{
+      
+      filter: hue-rotate(360deg);
+    }
   }
  
   
@@ -37,13 +51,30 @@
   .cont-typo-about{
       position: absolute;
       width: 400px;
-      right: 30px;
-      top: 200px;
-      color: white
+      left: 30px;
+      top: 100px;
+      color: white;
+      padding: 30px 35px;
+      z-index: 1500;
   }
-
+  .overlay-about{
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 5px;
+    opacity: .7;
+    background-color: #1d1d1d;
+  }
+  .cont-title-about{
+    position: relative;
+    
+  }
+ 
   .titulo{
-
+     border-bottom: 2px solid #8d8d8d;
+     padding-bottom: 10px;
   }
   .contenido{
      padding-top: 30px;
@@ -56,6 +87,7 @@
     transform: scale(.8);
     z-index: 100;
     transition: 0.5s;
+    
   }
 
   
@@ -92,6 +124,8 @@
     animation: animate  linear infinite;
     animation-duration: 5s;
   }
+
+
 
   @media only screen and (max-width: 600px){
     .scene .moon-nigth {

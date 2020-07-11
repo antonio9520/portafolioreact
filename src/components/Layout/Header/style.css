@@ -2,7 +2,7 @@
   position: absolute;
     display: inline-block;
     flex-direction: row;
-    background-color: transparent;
+    background-color: transparent ;
     height: 60px;
     z-index: 1500;
     top: 0px;

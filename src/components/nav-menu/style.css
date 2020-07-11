@@ -1,0 +1,37 @@
+.container-nav-sticky {
+    position: sticky;
+    display: inline-block;
+    flex-direction: row;
+    background-color: transparent;
+    height: 60px;
+    z-index: 1500;
+    top: 0;
+    width: 100%;
+    transition: 0.4s all;
+    /* -webkit-box-shadow: 0px 11px 25px -1px rgba(0,0,0,0.62); 
+    box-shadow: 0px 11px 25px -1px rgba(0,0,0,0.62); */
+ 
+}
+.container-nav-sticky .nav-primary {
+  text-align: center;
+ 
+}
+.container-nav-sticky .nav-primary ul  {
+  display: inline-flex;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: white;
+}
+.container-nav-sticky .nav-primary ul li a {
+  text-decoration: none;
+  color: white;
+  opacity: 1;
+}
+.link{
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.link.active{
+  text-decoration: underline;
+}

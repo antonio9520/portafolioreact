@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from "react";
+import React, { useState, Fragment, useRef } from "react";
 import "./JobExperience.css";
 import { Typography, IconButton, Hidden } from "@material-ui/core";
 import { LineEnd, LineStart, Line, CardArrow, LineItem } from "./components";
@@ -12,31 +12,31 @@ import CardExperience from "./mdUp/CardExperience";
 
 const JobExperience = () => {
   const [image, setImage] = useState();
+  // const [time, setTime] = useState(false);
   const [collapse, setCollapse] = useState(false);
-  let interval = null;
-  const [intervalId, setIntervalId] = useState({interval: interval})
-  let contador = 0;
-  
+  // const timeToClear = useRef(false);
 
   const changeImage = () => {
     // setImage(img);
-       rotarImagen()
-       interval = setInterval(() =>  {
-          rotarImagen();
-      },3000);
-  };
-  const handleClick = () => {
-    setCollapse(!collapse);
-    clearInterval(intervalId.interval)
-   
+    rotarImagen();
+    // timeToClear.current = window.setInterval(() => rotarImagen(), 10000);
   };
 
-    const rotarImagen = () => {
-      let misImagenes = [img2, duoc2, duoc3];
+  var contador = 0;
+  let rotarImagen = () => {
+   
+      let misImagenes = [duoc2, img2,  duoc3];
       setImage(misImagenes[contador]);
       contador++;
       if (contador === 3) contador = 0;
+   
+  };
 
+  const handleClick = () => {
+    setCollapse(!collapse);
+    // setTime(!time);
+    // window.clearInterval(timeToClear.current);
+     setImage(null);
   };
 
   return (
@@ -84,12 +84,10 @@ const JobExperience = () => {
                       icon={<School />}
                       image={image}
                       title="I.P. Duoc UC."
-                      sub1="2 Year"
+                      sub1="2 Años"
                       year="2018"
-                      sub2="Student"
-                      body=" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris turpis
-          orci, placerat vitae mi eget, posuere mattis mi. Vestibulum tristique
-          pulvinar hendrerit."
+                      sub2="Estudiante Ingeniería en Informática"
+                      body=""
                     >
                       <LineItem />
                     </CardArrow>
@@ -132,7 +130,7 @@ const JobExperience = () => {
               timeout={2000}
               classNames="lineJob"
             >
-              <div style={{margin: "0 30px"}}>
+              <div style={{ margin: "0 30px" }}>
                 <Grid container justify="center">
                   <Grid item xs={12} sm={6} md={4}>
                     <CardExperience
@@ -145,7 +143,6 @@ const JobExperience = () => {
                 </Grid>
               </div>
             </CSSTransition>
-           
           </Hidden>
         </div>
       </div>

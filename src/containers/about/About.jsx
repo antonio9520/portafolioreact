@@ -1,11 +1,15 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState} from "react";
 import ReactDom from "react-dom";
-import {  Typography } from "@material-ui/core";
+import { Typography } from "@material-ui/core";
 import forest from "../../resources/img/study10.png";
+import parallax from "./parallax";
 import "./About.css";
 
 const About = () => {
+  
+
   useEffect(() => {
+    console.log("renderizado")
     const contenedor = document.getElementById("scene");
     const div = React.createElement(
       "div",
@@ -15,22 +19,27 @@ const About = () => {
     const div3 = React.createElement(
       "div",
       { className: "cont-typo-about" },
+      
       <div>
+      <div className="overlay-about"></div>
+      <div className="cont-title-about">
         <Typography variant="h4" className="titulo">
-          Sobre mi
+          Sobre mi.
         </Typography>
         <Typography variant="body2" className="contenido">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris turpis
-          orci, placerat vitae mi eget, posuere mattis mi. Vestibulum tristique
-          pulvinar hendrerit.
+          Hola, soy Abraham Vidal, estudiante de la carrera de Ingeniería en Informática y desarrollador ReactJs.
+          Como desarrollador Web Junior, me encantaria poder formar parte de una empresa en donde pueda aplicar todos mis conocimientos
+          , y al mismo tiempo, que me permita desarrollarme profesionalmente.
+          Soy una persona autodidacta, responsable, proactivo, cooperativo y comprometido con sus objetivos.
         </Typography>
+        </div>
       </div>
     );
-    const div2 = React.createElement(
-      "div",
-      {},
-      <div className="moon-nigth"></div>
-    );
+    // const div2 = React.createElement(
+    //   "div",
+    //   {},
+    //   <div className="moon-nigth"></div>
+    // );
     let elements = [];
     for (let i = 0; i < 350; i++) {
       let x = Math.floor(Math.random() * window.innerWidth);
@@ -53,13 +62,16 @@ const About = () => {
     }
     var container = React.createElement("div", { className: "scene" }, [
       div,
-      div2,
+      // div2,
       div3,
       elements,
     ]);
 
     ReactDom.hydrate(container, contenedor);
   }, []);
+  //  useEffect(() => {
+   
+  
 
   return <div className="scene" id="scene"></div>;
 };
