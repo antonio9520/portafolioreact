@@ -29,7 +29,7 @@ const Target = () => {
               <Link
                 activeClass="active"
                 className="link"
-                to="about"
+                to="scene"
                 spy={true}
                 smooth={true}
                 offset={50}

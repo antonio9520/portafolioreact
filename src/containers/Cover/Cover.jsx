@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Fragment} from "react";
 import { Grid, Hidden } from "@material-ui/core";
 import Layout from "../../components/Layout/Layout/Layout";
 import "./style.css";
@@ -14,8 +14,8 @@ import cloud3 from "../../resources/img/cloud3.png"
 const Cover = () => {
   
   return (
-    <>
-      <Grid container className="body">
+    <Fragment>
+      <Grid container className="body" id="Inicio">
         <Hidden smDown>
       <img className="img" alt="body" src={mountains}></img> 
       <img className="img-down" alt="body" src={mountainsDown}></img> 
@@ -47,7 +47,7 @@ const Cover = () => {
         </Grid>
       </Grid>
       <Layout />
-    </>
+    </Fragment>
   );
 };
 

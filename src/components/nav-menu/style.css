@@ -1,37 +1,54 @@
 .container-nav-sticky {
-    position: sticky;
-    display: inline-block;
-    flex-direction: row;
-    background-color: transparent;
-    height: 60px;
-    z-index: 1500;
-    top: 0;
-    width: 100%;
-    transition: 0.4s all;
-    /* -webkit-box-shadow: 0px 11px 25px -1px rgba(0,0,0,0.62); 
+  position: sticky;
+  display: inline-block;
+  flex-direction: row;
+  background-color: transparent;
+  height: 60px;
+  z-index: 1500;
+  top: 0;
+  width: 100%;
+  transition: 0.4s all;
+  /* -webkit-box-shadow: 0px 11px 25px -1px rgba(0,0,0,0.62); 
     box-shadow: 0px 11px 25px -1px rgba(0,0,0,0.62); */
- 
 }
 .container-nav-sticky .nav-primary {
-  text-align: center;
- 
-}
-.container-nav-sticky .nav-primary ul  {
-  display: inline-flex;
-  margin-left: 10px;
-  margin-right: 10px;
-  color: white;
-}
-.container-nav-sticky .nav-primary ul li a {
-  text-decoration: none;
-  color: white;
-  opacity: 1;
-}
-.link{
-  margin-left: 20px;
-  cursor: pointer;
+  text-align: right;
 }
 
-.link.active{
+.ul-nav {
+  right: 500px;
+
+  padding: 15px 15px;
+  border-radius: 10px;
+  transform: translateX(0);
+  transition: 0.5s all;
+}
+
+.ul-nav-active {
+  transform: translateX(150%);
+
+  transition: 0.5s all;
+}
+
+.link {
+  margin-left: 20px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.link.active {
   text-decoration: underline;
 }
+
+.icon-btn-nav{
+  animation: fadeIn 2s linear;
+}
+ @keyframes fadeIn{
+   0%{
+     opacity: 0;
+   }
+   100%{
+     opacity: 1;
+   }
+ }
+

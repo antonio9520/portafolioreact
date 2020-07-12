@@ -30,7 +30,7 @@ const About = () => {
           Hola, soy Abraham Vidal, estudiante de la carrera de Ingeniería en Informática y desarrollador ReactJs.
           Como desarrollador Web Junior, me encantaria poder formar parte de una empresa en donde pueda aplicar todos mis conocimientos
           , y al mismo tiempo, que me permita desarrollarme profesionalmente.
-          Soy una persona autodidacta, responsable, proactivo, cooperativo y comprometido con sus objetivos.
+          Me apasiona programar, lo que me llevo a aprender de manera autodidacta.
         </Typography>
         </div>
       </div>

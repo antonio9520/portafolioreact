@@ -38,11 +38,7 @@ const Knowledge = () => {
       typo: "Sql",
       className: "avatar-novice",
     },
-    {
-      avatar: "N",
-      typo: "C#",
-      className: "avatar-novice",
-    },
+  
   ];
   const databases = [
     {
@@ -70,6 +66,11 @@ const Knowledge = () => {
     {
       avatar: "N",
       typo: "NodeJs",
+      className: "avatar-novice",
+    },
+    {
+      avatar: "N",
+      typo: "Express",
       className: "avatar-novice",
     },
   ];
