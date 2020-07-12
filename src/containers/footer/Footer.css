@@ -1,0 +1,51 @@
+.footer{
+    margin: 0;
+    padding: 30px 15px;
+    color: white;
+    background-color: #323232;
+    text-align: center;
+}
+
+.container-icons-footer{
+    display: inline-flex;
+
+}
+.typo-footer {
+    letter-spacing: 2px;
+}
+.typo-footer span{
+    color: rgb(86, 86, 194);
+    font-size: 30px;
+}
+
+.icon-footer{
+    color: white;
+    animation: animationIconReverse .5s linear;
+}
+
+.icon-footer:hover{
+    animation: animationIcon .5s linear;
+    color: rgb(86, 86, 194)
+}
+
+@keyframes animationIcon {
+    0%{
+        transform: rotate(0);
+        color: white;
+    }
+    100%{
+        transform: rotate(360deg);
+        color: rgb(86, 86, 194)
+    }
+}
+
+@keyframes animationIconReverse {
+    0%{
+        transform: rotate(360deg);
+        color: rgb(86, 86, 194)
+    }
+    100%{
+        transform: rotate(0);
+        color: white
+    }
+}

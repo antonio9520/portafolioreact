@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { Cover, JobExperience, Knowledge, Proyects, About } from "../";
+import { Cover, JobExperience, Knowledge, Proyects, About, Footer } from "../";
 
 const Contenido = () => {
   return (
@@ -9,6 +9,7 @@ const Contenido = () => {
       <JobExperience />
       <Knowledge />
       <Proyects />
+      <Footer />
     </Fragment>
   );
 };

@@ -1,6 +1,6 @@
 .container-proyects{
     width: 100%;
-    background-color: rgb(240, 240, 240);
+    background-color: rgb(63, 9, 9);
     position: relative;
     text-align: center;
     padding-top: 100px;
@@ -9,5 +9,5 @@
 
 .title-proyect{
     padding-bottom: 100px;
-    color: #555555
+    color: #ffffff
 }

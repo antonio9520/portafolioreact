@@ -31,7 +31,7 @@
       0 0 0 180px rgba(255, 255, 255, 0.1);
   }
 }
-
+ 
 .img {
   width: 100%;
   margin: 0;
@@ -58,8 +58,9 @@
   z-index: 1000;
   top: 150px;
   left: 0;
-  max-width: 300px;
-  animation: animatecloud 160s linear infinite;
+  width: 400px;
+ 
+  animation: animatecloud 250s linear infinite;
   filter: invert(30%);
 }
 .cloud2 {
@@ -67,27 +68,29 @@
   z-index: 1000;
   left: 0;
   top: 200px;
-  max-width: 400px;
-  animation: animatecloud 200s linear infinite;
+  width: 400px;
+  animation: animatecloud 250s linear infinite;
   filter: invert(40%);
+  animation-delay: -10s;
 }
 .cloud3 {
   position: absolute;
   z-index: 1000;
   left: 0;
   top: 200px;
-  max-width: 400px;
-  animation: animatecloud 250s linear infinite;
+  width: 400px;
+  animation: animatecloud 300s linear infinite;
   filter: invert(20%);
+ 
 }
 .cloud4 {
   position: absolute;
   z-index: 1000;
   left: 0;
   top: 200px;
-  max-width: 200px;
-  animation: animatecloud 100s linear infinite;
-  animation-delay: -20s;
+ width: 200px;
+  animation: animatecloud 200s linear infinite;
+  animation-delay: -25s;
   filter: invert(40%);
 }
 .cloud5 {
@@ -95,19 +98,19 @@
   z-index: 1000;
   top: 180px;
   left: 0;
-  max-width: 350px;
-  animation: animatecloud 120s linear infinite;
-  animation-delay: -5s;
+  width: 350px;
+  animation: animatecloud 220s linear infinite;
+  animation-delay: -20s;
   filter: invert(15%);
 }
 .cloud6 {
   position: absolute;
   z-index: 1000;
-  top: 75px;
+  top: 130px;
   left: 0;
-  max-width: 250px;
-  animation: animatecloud 100s linear infinite;
-  animation-delay: -10s;
+  width: 250px;
+  animation: animatecloud 230s linear infinite;
+  animation-delay: -30s;
   filter: invert(30%);
 }
 

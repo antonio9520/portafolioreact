@@ -29,14 +29,10 @@ const Cover = () => {
       <div className="moon"></div>
       <img className="cloud1" alt="nube1" src={cloud1}></img>
       <img className="cloud2" alt="nube1" src={cloud2}></img>
-      <img className="cloud3" alt="nube1" src={cloud3}></img>
-      <img className="cloud4" alt="nube1" src={cloud1}></img>
+     <img className="cloud3" alt="nube1" src={cloud3}></img>
+       <img className="cloud4" alt="nube1" src={cloud1}></img>
       <img className="cloud5" alt="nube1" src={cloud2}></img>
-      <img className="cloud6" alt="nube1" src={cloud3}></img>
-        {/* <video id="video" className="img" loop autoPlay muted>
-          <source src={video} type="video/mp4" />
-          </video> */}
-        {/* <div className="overlay"></div> */}
+      <img className="cloud6" alt="nube1" src={cloud3}></img> 
         <Grid container className="container-Info">
           <Grid item xs={12} sm={12} md={12}>
             <div className="vidContent">
