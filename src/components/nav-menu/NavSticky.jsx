@@ -5,7 +5,6 @@ import { Menu, DoubleArrow } from "@material-ui/icons";
 import { Link } from "react-scroll";
 
 const NavSticky = () => {
-  const [scrolling, setScrolling] = useState(false);
   const [scrollTop, setScrollTop] = useState(0);
   const [show, setShow] = useState(false);
   const [open, setOpen] = useState(false);
@@ -14,13 +13,12 @@ const NavSticky = () => {
     setOpen(!open);
   };
   const handleClick = () => {
-    setOpen(false)
-  }
+    setOpen(false);
+  };
 
   useEffect(() => {
     const onScroll = (e) => {
       setScrollTop(e.target.documentElement.scrollTop);
-      setScrolling(e.target.documentElement.scrollTop > scrollTop);
     };
     window.addEventListener("scroll", onScroll);
     if (scrollTop > 700) {
@@ -36,7 +34,7 @@ const NavSticky = () => {
       <div className="container-nav-sticky">
         <nav className="nav-primary">
           <ul className={open ? "ul-nav" : "ul-nav-active"}>
-          <Link
+            <Link
               activeClass="active"
               className="link"
               to="Inicio"
@@ -111,12 +109,15 @@ const NavSticky = () => {
             </Link>
           </ul>
           <IconButton
-          className="icon-btn-nav"
+            className="icon-btn-nav"
             style={{ backgroundColor: "white", marginRight: "15px" }}
             onClick={handleButton}
           >
-            {open === false ?  <Menu style={{ color: "#555555" }} /> :  <DoubleArrow style={{ color: "#555555" }} />}
-           
+            {open === false ? (
+              <Menu style={{ color: "#555555" }} />
+            ) : (
+              <DoubleArrow style={{ color: "#555555" }} />
+            )}
           </IconButton>
         </nav>
       </div>

@@ -1,10 +1,8 @@
 import React from "react";
 import "./style.css";
 import clsx from 'clsx';
-import { useDispatch } from "react-redux";
 import { Typography, IconButton, makeStyles, Collapse } from "@material-ui/core";
 import { ExpandMore, GitHub, QueuePlayNext} from "@material-ui/icons"
-import image from "../../../resources/img/reactimage.jpg";
 import LenguajeIcon from "./LenguajeIcon";
 
 const useStyles = makeStyles((theme) => ({
@@ -25,7 +23,6 @@ const useStyles = makeStyles((theme) => ({
    
 const CardProyect = ({ proyecto }) => {
 
-  const dispatch = useDispatch();
 
   const { imageURL, nombre, lenguajes, descripcion } = proyecto;
 

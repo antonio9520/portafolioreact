@@ -1,22 +1,12 @@
 .body {
   margin: 0;
+  top: 0px;
   position: relative;
   width: 100%;
   height: 105vh;
   overflow: hidden;
 }
-/* .moon {
-  width: 30px;
-  height: 30px;
-  background-color: #fff;
-  position: absolute;
-  top: 600px;
-  left: 40%;
-  z-index: 500;
-  border-radius: 50%;
-  /* animation: animateshadow 5s infinite;
-  animation-direction: alternate; 
-} */
+
 @keyframes animateshadow {
   0% {
     box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.5),
@@ -164,47 +154,5 @@
   }
 }
 
-@media only screen and (max-width: 600px) {
-  .moon {
-    width: 50px;
-    height: 50px;
-    background-color: #fff;
-    position: absolute;
-    top: 50px;
-    left: 80px;
-    z-index: 500;
-    border-radius: 50%;
-    animation: animateshadow 5s infinite;
-    animation-direction: alternate;
-  }
-}
-@media only screen and (min-width: 600px) and (max-width: 960px) {
-  .moon {
-    width: 70px;
-    height: 70px;
-    background-color: #fff;
-    position: absolute;
-    top: 80px;
-    left: 130px;
-    z-index: 500;
-    border-radius: 50%;
-    animation: animateshadow 5s infinite;
-    animation-direction: alternate;
-  }
-}
-/* @media only screen and (min-width: 960px) {
-  
-    .moon {
-      width: 30px;
-      height: 30px;
-      background-color: #fff;
-      position: absolute;
-      top: 400px;
-      left: 53.4%;
-      z-index: 500;
-      border-radius: 50%;
-      /* animation: animateshadow 5s infinite;
-      animation-direction: alternate; 
-    }
-  
-} */
+
+

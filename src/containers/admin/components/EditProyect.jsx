@@ -111,6 +111,7 @@ const EditProyect = () => {
         setMui(true);
       }
     }
+    //eslint-disable-next-line
   }, [proedit]);
 
   const handleCheck = (lgt) => {

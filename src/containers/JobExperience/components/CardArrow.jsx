@@ -1,12 +1,9 @@
 import React, { useState } from "react";
 import { Typography, IconButton } from "@material-ui/core";
-import img from "../../../resources/img/duoc.jpg";
-import duoc2 from "../../../resources/img/duoc2.jpg";
-import duoc3 from "../../../resources/img/duoc3.jpg";
-import img2 from "../../../resources/img/laptop2.jpg";
+
 
 const CardArrow = (props) => {
-  const { title, sub1, year, sub2, body, icon, changeImage, id, image } = props;
+  const { title, sub1, year, sub2, body, icon, changeImage} = props;
 
   const [flip, setFlip] = useState(false);
 

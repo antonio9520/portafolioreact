@@ -11,7 +11,7 @@ const Privado = ({ component: Component, ...props }) => {
   
   useEffect(() => {
     dispatch(obtenerTokenAction());
-  }, []);
+  });
   
   return (
     <Route

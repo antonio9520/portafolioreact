@@ -1,6 +1,6 @@
 .container-Know {
   width: 100%;
-  min-height: 130vh;
+  min-height: 115vh;
   position: relative;
 }
 
@@ -18,13 +18,13 @@
   position: relative;
 }
 .title-know {
-  padding-top: 24%;
+  padding-top: 20%;
   color: white;
   text-align: center;
   transition: 2s all ease;
 }
 .title-know-active {
-  padding-top: 7%;
+  padding-top: 5%;
   padding-bottom: 10px;
   text-align: center;
   color: white;

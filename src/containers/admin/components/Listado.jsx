@@ -24,7 +24,7 @@ const Listado = () => {
   useEffect(() => {
     const result = () => dispatch(obtenerProyectosAction());
     result();
-  }, []);
+  });
 
   return (
     <Fragment>

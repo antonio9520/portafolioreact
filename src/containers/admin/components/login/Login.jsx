@@ -25,6 +25,7 @@ const Login = () => {
      if(autenticado){
          history.push("/admin")
      }
+     //eslint-disable-next-line
   }, [autenticado])
 
   const submitForm = (e) => {

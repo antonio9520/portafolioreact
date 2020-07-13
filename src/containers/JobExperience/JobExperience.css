@@ -13,14 +13,14 @@
  overflow: hidden;
 }
 .job-title {
-  padding-top: 24%;
+  padding-top: 20%;
   padding-bottom: 10px;
   text-align: center;
   color: white;
   transition: 2s all ease;
 }
 .job-title-active {
-  padding-top: 7%;
+  padding-top: 5%;
   padding-bottom: 10px;
   text-align: center;
   color: white;

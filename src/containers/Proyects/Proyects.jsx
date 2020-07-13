@@ -13,7 +13,7 @@ const Proyects = () => {
   useEffect(() => {
     const consulta = () => dispatch(obtenerProyectosAction());
     consulta();
-  }, []);
+  });
 
   return (
     <div className="container-proyects" id="proyects">

@@ -1,19 +1,42 @@
-import React, { useEffect, Fragment, useState } from "react";
+import React, { useEffect, Fragment } from "react";
 import ReactDom from "react-dom";
 import { Typography, IconButton } from "@material-ui/core";
-import { Mail, GitHub, Instagram} from "@material-ui/icons";
+import { Mail, GitHub, Instagram } from "@material-ui/icons";
 import forest from "../../resources/img/study10.png";
 import "./About.css";
 
 const About = () => {
-  
   const contacto = [
-    { typo: "", icon: <Mail />, target: "", link: "mailto:antonio.vidal95@hotmail.com" },
-    { typo: "", icon: <Mail />, target:"", link: "mailto:abrvc95@gmail.com" },
-    { typo: "", icon: <GitHub />, target:"_blank", link: "https://github.com/antonio9520" },
-    { typo: "", icon: <Instagram />, target:"_blank", link:"https://www.instagram.com/abraham.antonio95/?hl=es-la" },
+    {
+      typo: "",
+      icon: <Mail />,
+      target: "",
+      link: "mailto:antonio.vidal95@hotmail.com",
+      title: "Enviar correo a antonio.vidal95@hotmail.com",
+    },
+    {
+      typo: "",
+      icon: <Mail />,
+      target: "",
+      link: "mailto:abrvc95@gmail.com",
+      title: "Enviar correo a abrvc95@gmail.com",
+    },
+    {
+      typo: "",
+      icon: <GitHub />,
+      target: "_blank",
+      link: "https://github.com/antonio9520",
+      title: "Ir a Perfil",
+    },
+    {
+      typo: "",
+      icon: <Instagram />,
+      target: "_blank",
+      link: "https://www.instagram.com/abraham.antonio95/?hl=es-la",
+      title: "Ir a perfil",
+    },
   ];
- 
+
   useEffect(() => {
     const contenedor = document.getElementById("scene");
     const div = React.createElement(
@@ -24,7 +47,7 @@ const About = () => {
     const div3 = React.createElement(
       "div",
       { className: "cont-typo-about" },
-      <div>
+      <div className="cont-typo-about-sub">
         <div className="overlay-about"></div>
         <div className="cont-title-about">
           <Typography variant="h4" className="titulo">
@@ -47,17 +70,22 @@ const About = () => {
       <Fragment>
         {contacto.map((contact, i) => (
           <>
-          <div key={i} className="cont-sub-contacto">
-            <div className="cont-left">
-              <Typography className="typo-contacto" variant="h6">
-                {contact.typo}
-              </Typography>
-            </div>
-            <div className="cont-right">
-              <IconButton href={contact.link} target={contact.target}  className="icon-btn-contacto">
-                {contact.icon}
-              </IconButton>
-            </div>
+            <div key={i} className="cont-sub-contacto">
+              <div className="cont-left">
+                <Typography className="typo-contacto" variant="h6">
+                  {contact.typo}
+                </Typography>
+              </div>
+              <div className="cont-right">
+                <IconButton
+                  href={contact.link}
+                  title={contact.title}
+                  target={contact.target}
+                  className="icon-btn-contacto"
+                >
+                  {contact.icon}
+                </IconButton>
+              </div>
             </div>
           </>
         ))}
@@ -91,7 +119,7 @@ const About = () => {
     ]);
 
     ReactDom.hydrate(container, contenedor);
-  }, []);
+  });
 
   return <div className="scene" id="scene"></div>;
 };

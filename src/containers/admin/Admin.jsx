@@ -1,11 +1,8 @@
 import React, { Fragment } from "react";
 import { Nav, EditProyect, NewProyect, Listado } from "./components";
 import {
-  BrowserRouter as Router,
   Switch,
   Route,
-  Link,
-  useParams,
   useRouteMatch,
 } from "react-router-dom";
 

@@ -1,4 +1,4 @@
-import React, { useState, Fragment, useRef } from "react";
+import React, { useState, Fragment } from "react";
 import "./JobExperience.css";
 import { Typography, IconButton, Hidden } from "@material-ui/core";
 import { LineEnd, LineStart, Line, CardArrow, LineItem } from "./components";
@@ -79,7 +79,7 @@ const JobExperience = () => {
                   </Grid>
                   <Grid item xs={2} sm={2} md={2}>
                     <CardArrow
-                      id="school"
+                     
                       changeImage={changeImage}
                       icon={<School />}
                       image={image}

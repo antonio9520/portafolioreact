@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, Avatar, Grid } from "@material-ui/core";
+import { Typography, Avatar } from "@material-ui/core";
 import "./styles.css"
 
 const categories = () => {

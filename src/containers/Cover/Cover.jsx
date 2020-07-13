@@ -26,7 +26,7 @@ const Cover = () => {
       <Hidden smUp>
       <img className="img" alt="body" src={mountainsXs}></img> 
       </Hidden>
-      <div className="moon"></div>
+     
       <img className="cloud1" alt="nube1" src={cloud1}></img>
       <img className="cloud2" alt="nube1" src={cloud2}></img>
      <img className="cloud3" alt="nube1" src={cloud3}></img>
