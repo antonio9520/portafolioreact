@@ -15,13 +15,15 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
-
   title: {
     flexGrow: 1,
   },
 }));
+
 const Nav = () => {
+
   let { url } = useRouteMatch();
+  console.log(url)
   const history = useHistory();
   const classes = useStyles();
   const dispatch = useDispatch();

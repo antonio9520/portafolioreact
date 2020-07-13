@@ -136,8 +136,7 @@ const JobExperience = () => {
                     <CardExperience
                       img={duoc2}
                       titulo="Duoc UC."
-                      descripcion="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris turpis
-          orci, placerat vitae mi eget,"
+                      descripcion="Estudiante de la carrera Ingeniería en informática"
                     />
                   </Grid>
                 </Grid>

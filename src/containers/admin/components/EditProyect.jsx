@@ -48,8 +48,9 @@ const EditProyect = () => {
     descripcion: "",
     proyectURL: "",
     gitURL: "",
+    servidorURL: "",
   });
-  const { nombre, descripcion, proyectURL, gitURL } = proyecto;
+  const { nombre, descripcion, proyectURL, gitURL, servidorURL } = proyecto;
   const changeFile = (event) => {
     setImage({
       file: URL.createObjectURL(event.target.files[0]),
@@ -69,6 +70,7 @@ const EditProyect = () => {
       descripcion: proedit.descripcion,
       proyectURL: proedit.proyectURL,
       gitURL: proedit.gitURL,
+      servidorURL: proedit.servidorURL,
     });
     setImage({ file: proedit.imageURL, imageURL: proedit.imageURL });
     for (let i = 0; i < proedit.lenguajes.length; i++) {
@@ -133,6 +135,7 @@ const EditProyect = () => {
         nombre,
         descripcion,
         proyectURL,
+        servidorURL,
         gitURL,
         lenguajes,
         imageURL,
@@ -398,7 +401,7 @@ const EditProyect = () => {
                     item
                     xs={12}
                     sm={12}
-                    md={6}
+                    md={4}
                     className={classes.textfield}
                   >
                     <TextField
@@ -413,7 +416,7 @@ const EditProyect = () => {
                     item
                     xs={12}
                     sm={12}
-                    md={6}
+                    md={4}
                     className={classes.textfield}
                   >
                     <TextField
@@ -421,6 +424,21 @@ const EditProyect = () => {
                       value={proyectURL}
                       label="Proyecto URL"
                       name="proyectURL"
+                      onChange={changeProyecto}
+                    ></TextField>
+                  </Grid>
+                  <Grid
+                    item
+                    xs={12}
+                    sm={12}
+                    md={4}
+                    className={classes.textfield}
+                  >
+                    <TextField
+                      fullWidth
+                      value={servidorURL}
+                      label="Servidor URL"
+                      name="servidorURL"
                       onChange={changeProyecto}
                     ></TextField>
                   </Grid>

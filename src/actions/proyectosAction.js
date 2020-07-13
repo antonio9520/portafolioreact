@@ -51,6 +51,7 @@ export function guardarProyectoAction(proyecto) {
       fd.append("descripcion", proyecto.descripcion);
       fd.append("proyectoURL", proyecto.poyectoURL);
       fd.append("gitURL", proyecto.gitURL);
+      fd.append("servidorURL", proyecto.servidorURL);
       for (let i = 0; i < proyecto.lenguajes.length; i++) {
         fd.append("lenguajes[]", proyecto.lenguajes[i]);
       }
@@ -100,12 +101,12 @@ export function editarProyectoAction(proyecto) {
       fd.append("descripcion", proyecto.descripcion);
       fd.append("proyectoURL", proyecto.poyectoURL);
       fd.append("gitURL", proyecto.gitURL);
+      fd.append("servidorURL", proyecto.servidorURL);
       for (let i = 0; i < proyecto.lenguajes.length; i++) {
         fd.append("lenguajes[]", proyecto.lenguajes[i]);
       }
       await Axios.put(`/api/proyectos/${proyecto._id}`, fd).then(
-       
-      (res) => (proyecto.imageURL = res.data.editproyecto.imageURL)
+        (res) => (proyecto.imageURL = res.data.editproyecto.imageURL)
       );
       dispatch(editarExito(proyecto));
     } catch (error) {

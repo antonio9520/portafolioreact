@@ -11,7 +11,8 @@ const Privado = ({ component: Component, ...props }) => {
   
   useEffect(() => {
     dispatch(obtenerTokenAction());
-  });
+    //eslint-disable-next-line
+  },[]);
   
   return (
     <Route

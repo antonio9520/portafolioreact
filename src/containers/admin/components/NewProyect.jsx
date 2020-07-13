@@ -37,8 +37,9 @@ const NewProyect = () => {
     descripcion: "",
     proyectoURL: "",
     gitURL: "",
+    servidorURL: "",
   });
-  const { nombre, descripcion, proyectoURL, gitURL } = proyecto;
+  const { nombre, descripcion, proyectoURL, gitURL, servidorURL } = proyecto;
   const [lenguajes] = useState([]);
   const changeFile = (event) => {
     setImage({
@@ -55,11 +56,9 @@ const NewProyect = () => {
     } else {
       lenguajes.push(lgt);
     }
-    
   };
   const changeProyecto = (e) => {
     setProyecto({ ...proyecto, [e.target.name]: e.target.value });
-   
   };
   const onsubmitproyecto = (e) => {
     e.preventDefault();
@@ -70,6 +69,7 @@ const NewProyect = () => {
         descripcion,
         proyectoURL,
         gitURL,
+        servidorURL,
         lenguajes,
         imageURL,
       })
@@ -308,7 +308,7 @@ const NewProyect = () => {
                     item
                     xs={12}
                     sm={12}
-                    md={6}
+                    md={4}
                     className={classes.textfield}
                   >
                     <TextField
@@ -322,13 +322,27 @@ const NewProyect = () => {
                     item
                     xs={12}
                     sm={12}
-                    md={6}
+                    md={4}
                     className={classes.textfield}
                   >
                     <TextField
                       fullWidth
                       label="Proyecto URL"
                       name="proyectoURL"
+                      onChange={changeProyecto}
+                    ></TextField>
+                  </Grid>
+                  <Grid
+                    item
+                    xs={12}
+                    sm={12}
+                    md={4}
+                    className={classes.textfield}
+                  >
+                    <TextField
+                      fullWidth
+                      label="Servidor URL"
+                      name="servidorURL"
                       onChange={changeProyecto}
                     ></TextField>
                   </Grid>
