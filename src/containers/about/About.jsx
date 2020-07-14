@@ -3,9 +3,13 @@ import ReactDom from "react-dom";
 import { Typography, IconButton } from "@material-ui/core";
 import { Mail, GitHub, Instagram } from "@material-ui/icons";
 import forest from "../../resources/img/study10.png";
+import house from "../../resources/img/house3.png"
+import universe from "../../resources/img/planets.png"
 import "./About.css";
 
-const About = () => {
+const About = (props) => {
+  const {me} = props;
+  
   const contacto = [
     {
       typo: "",
@@ -39,10 +43,20 @@ const About = () => {
 
   useEffect(() => {
     const contenedor = document.getElementById("scene");
+    const back = React.createElement(
+      "div",
+      {className: "backImg"}
+      , <img src={universe}></img>
+    )
     const div = React.createElement(
       "div",
       {},
-      <img src={forest} alt="forest" className="forest" />
+      <img src={forest} alt="forest" className={me} />
+    );
+    const div4 = React.createElement(
+      "div",
+      {},
+      <img src={house} alt="house" className="house" />
     );
     const div3 = React.createElement(
       "div",
@@ -113,14 +127,16 @@ const About = () => {
       elements.push(element);
     }
     var container = React.createElement("div", { className: "scene" }, [
-      div,
+     
       div2,
+      back,
+      div4,
       div3,
       elements,
     ]);
 
     ReactDom.hydrate(container, contenedor);
-  });
+  },[me]);
 
   return <div className="scene" id="scene"></div>;
 };

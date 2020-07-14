@@ -1,38 +1,54 @@
-import React from "react";
+import React, { Fragment, Component } from "react";
 import "./App.css";
 import { Hidden } from "@material-ui/core";
-import { Contenido, Admin, Login } from "../";
+import { Contenido } from "../";
 import { NavSticky, MenuMdDown } from "../../components";
-import Privado from "../../components/rutas/Privado";
-import { Provider } from "react-redux";
-import store from "../../store/store";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import tokenAuth from "../../config/tokenAuth";
+import { Cover, JobExperience, Knowledge, Proyects, About, Footer } from "../";
 
-const token = localStorage.getItem("token");
-if (token) {
-  tokenAuth(token);
-}
-function App() {
-  return (
-    <Router>
-      <Provider store={store}>
-        <NavSticky />
-        <Hidden mdUp>
-          <MenuMdDown />
-        </Hidden>
-        <Switch>
-          <Route exact path="/">
-            <Contenido />
-          </Route>
-          <Route exact path="/login">
-            <Login />
-          </Route>
-          <Privado path="/admin" component={Admin}></Privado>
-        </Switch>
-      </Provider>
-    </Router>
-  );
+class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      me: "hidden",
+      top: "hidden",
+    };
+  }
+
+  componentDidMount() {
+    window.onscroll = () => this.handleAnimation();
+    console.log(document.documentElement.scrollTop)
+  }
+
+  handleAnimation = () => {
+    if(document.documentElement.scrollTop > 500){
+      this.setState({
+        me: 'me-visible',
+       
+      });
+    }
+    if(document.documentElement.scrollTop < 490){
+      this.setState({
+        me: 'hidden',
+       
+      });
+    }
+  };
+
+  render() {
+    return (
+      
+        <div>
+        <Cover />
+        <About me={this.state.me} />
+        <JobExperience />
+        <Knowledge />
+        <Proyects />
+        <Footer />
+        </div>
+     
+    );
+  }
 }
 
 export default App;

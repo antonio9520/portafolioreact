@@ -5,10 +5,8 @@ import { Menu, DoubleArrow } from "@material-ui/icons";
 import { Link } from "react-scroll";
 
 const NavSticky = () => {
-  const [scrollTop, setScrollTop] = useState(0);
-  const [show, setShow] = useState(false);
+ 
   const [open, setOpen] = useState(false);
-
   const handleButton = () => {
     setOpen(!open);
   };
@@ -16,18 +14,7 @@ const NavSticky = () => {
     setOpen(false);
   };
 
-  useEffect(() => {
-    const onScroll = (e) => {
-      setScrollTop(e.target.documentElement.scrollTop);
-    };
-    window.addEventListener("scroll", onScroll);
-    if (scrollTop > 700) {
-      setShow(true);
-    } else {
-      setShow(false);
-    }
-    return () => window.removeEventListener("scroll", onScroll);
-  }, [scrollTop]);
+
 
   const contenido = (
     <Hidden smDown>
@@ -123,7 +110,7 @@ const NavSticky = () => {
       </div>
     </Hidden>
   );
-  return <>{show ? contenido : null}</>;
+  return  contenido;
 };
 
 export default NavSticky;

@@ -13,7 +13,7 @@ import CardExperience from "./mdUp/CardExperience";
 const JobExperience = () => {
   const [image, setImage] = useState();
   // const [time, setTime] = useState(false);
-  const [collapse, setCollapse] = useState(false);
+  const [collapse, setCollapse] = useState(true);
   // const timeToClear = useRef(false);
 
   const changeImage = () => {

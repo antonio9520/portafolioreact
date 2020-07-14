@@ -15,7 +15,7 @@ import {
 import { CSSTransition } from "react-transition-group";
 
 const Knowledge = () => {
-  const [collapse, setCollapse] = useState(false);
+  const [collapse, setCollapse] = useState(true);
 
   const languages = [
     {

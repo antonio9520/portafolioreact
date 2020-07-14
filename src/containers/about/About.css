@@ -1,14 +1,31 @@
 .scene {
   position: relative;
   width: 100%;
-  min-height: 110vh;
-  background: url("../../resources//img/universe3.jpg");
-  background-size: cover;
-  overflow: hidden;
-  animation: scale 10s linear infinite;
-  animation-direction: alternate;
+  min-height: 100vh;
 
 }
+
+.backImg{
+  position:fixed;
+  
+  /* background: black; */
+  
+  overflow: hidden;
+  animation: scale 10s linear infinite; 
+   animation-direction: alternate; 
+   bottom: 0;
+   top:0;
+   height: 100%;
+   width: 100%;
+   
+}
+
+.backImg img{
+  position: absolute;
+  width: 100%;
+  top: 0;
+} 
+
 @keyframes scale {
   0% {
     filter: hue-rotate(0);
@@ -52,16 +69,51 @@
 .contenido {
   padding-top: 30px;
 }
-.forest {
+.hidden{
+  display: none;
+}
+.me-visible{
   position: absolute;
   bottom: -50px;
   left: 0;
   width: 100%;
-  transform: scale(0.8);
+  
+  z-index: 100;
+  animation-name: cardOne;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes cardOne {
+  0% {
+      opacity: 0.5;
+      transform:translateY(30px) scale(0.8)
+  }
+  50% {
+      opacity: 0.7;
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0) scale(0.8);
+  }
+}
+
+.forest {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transform: scale(1);
   z-index: 100;
   transition: 0.5s;
 }
-
+.house{
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
 .scene i {
   position: absolute;
   background-color: #fff;
