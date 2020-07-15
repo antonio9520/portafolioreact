@@ -4,6 +4,8 @@
     color: white;
     background-color: #323232;
     text-align: center;
+    position: relative;
+    z-index: 2000;
 }
 
 .container-icons-footer{

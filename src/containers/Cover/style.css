@@ -156,4 +156,24 @@
 }
 
 
+.div-discover{
+  position: absolute;
+  bottom:50px;
+  right: 10px;
+  padding: 10px;
+  
+}
+
+.div-discover p{
+  position: absolute;
+  transform: rotate(-90deg) ;
+  color: white;
+  font-family: "Oswald",sans-serif;
+  letter-spacing: 2px;
+  padding: 10px;
+  font-size:25px;
+right: -33px;
+bottom: 50px;
+}
+
 

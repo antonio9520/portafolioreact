@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;1,300&display=swap");
 .overlay {
   background: rgb(255, 255, 255);
   opacity: 0.8;
@@ -27,7 +29,9 @@
 }
 
 .card-cover {
-  position: relative;
+  position: absolute;
+bottom: -70px;
+left: 15px;
 }
 
 .title-target {
@@ -49,19 +53,70 @@
   -o-animation: fadeInFromNone 7s ease-out;
   animation: fadeInFromNone 7s ease-out;
 }
+.target-hellow{
+  color:  #ffffff;
+  position: absolute;
+  font-weight: 200;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 3em;
+  left: 30px;
+}
 .target-name{
-  color: #ffffff;
+  font-size: 8em;
+  color:  #ffffff;
+  font-weight: 400;
+  font-family: 'Oswald', sans-serif;
+
   -webkit-animation: fadeInFromNone 5s ease-out;
   -moz-animation: fadeInFromNone 5s ease-out;
   -o-animation: fadeInFromNone 5s ease-out;
   animation: fadeInFromNone 5s ease-out;
+ 
+  text-shadow: 0 1px 0 #ccc, 
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
 }
+.target-name span{
+  font-size: 10rem;
+  color: #ffffff;
+  font-weight: 400;
+  font-family: 'Oswald', sans-serif;
+ 
+  /* -webkit-animation: fadeInFromNone 5s ease-out;
+  -moz-animation: fadeInFromNone 5s ease-out;
+  -o-animation: fadeInFromNone 5s ease-out;
+  animation: fadeInFromNone 5s ease-out; */
+  text-shadow: 0 1px 0 #ccc, 
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+                         
+}
+
 
 .icon{
   margin-left: -20px;
   color: #fff;
-   animation: iconAnimation 1s linear infinite;
+   animation: iconAnimation .8s linear infinite;
    animation-direction: alternate; 
+   
 }
 @keyframes iconAnimation {
   0%{
@@ -140,3 +195,48 @@
 }
 
 
+.line {
+  position: absolute;
+  color: white;
+  bottom: 0;
+ left: 80%;
+  width: 200px;
+  margin: 0 auto;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  font-size: 180%;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-200%);
+  letter-spacing: 2px;
+  font-weight: 300;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-style: italic;
+}
+
+/*Animation*/
+
+.anim-typewriter {
+  animation: typewriter 4s steps(40) 2s  normal both infinite,
+  blinkTextCursor 500ms steps(40)  infinite normal;
+  animation-direction: alternate;
+
+}
+
+@keyframes typewriter {
+  from {
+        width: 0;
+  }
+  to {
+        width: 10em;
+  }
+}
+
+@keyframes blinkTextCursor {
+  from {
+        border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+        border-right-color: transparent;
+  }
+}

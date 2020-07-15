@@ -16,17 +16,18 @@ const Target = () => {
   const classes = useStyle();
   return (
     <Grid container justify="center" className={classes.containerTarget}>
-      <Grid item xs={12} sm={12} md={6} className="itemTarget">
+      <Grid item xs={12} sm={12} md={10} className="itemTarget">
         <div className="card-cover">
           <div className="title-target">
-            <Typography className="target-name" variant="h5">
-              Abraham Vidal
-            </Typography>
-            <Typography className="target-subtitle" variant="subtitle2">
-              React Developer
-            </Typography>
+          <h2 className="target-hellow" >
+              Hola, yo soy
+            </h2>
+            <h2 className="target-name" >
+              <span>A</span>braham <span>V</span>idal
+            </h2>
+            <p class="line anim-typewriter">Desarrollador ReactJs......!!</p>
             <div style={{ width: "100%", textAlign: "center" }}>
-              <Link
+              {/* <Link
                 activeClass="active"
                 className="link"
                 to="scene"
@@ -36,7 +37,7 @@ const Target = () => {
                 duration={500}
               >
                 <DoubleArrow fontSize="large" className="icon" />
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>

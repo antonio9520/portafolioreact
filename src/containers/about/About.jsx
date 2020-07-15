@@ -3,13 +3,13 @@ import ReactDom from "react-dom";
 import { Typography, IconButton } from "@material-ui/core";
 import { Mail, GitHub, Instagram } from "@material-ui/icons";
 import forest from "../../resources/img/study10.png";
-import house from "../../resources/img/house3.png"
-import universe from "../../resources/img/planets.png"
+import house from "../../resources/img/house3.png";
+import universe from "../../resources/img/planets2.png";
 import "./About.css";
 
 const About = (props) => {
-  const {me} = props;
-  
+  const { me } = props;
+
   const contacto = [
     {
       typo: "",
@@ -45,9 +45,9 @@ const About = (props) => {
     const contenedor = document.getElementById("scene");
     const back = React.createElement(
       "div",
-      {className: "backImg"}
-      , <img src={universe}></img>
-    )
+      { className: "backImg" },
+      <img src={universe}></img>
+    );
     const div = React.createElement(
       "div",
       {},
@@ -68,13 +68,13 @@ const About = (props) => {
             Sobre mi.
           </Typography>
           <Typography variant="body2" className="contenido">
-            Soy Abraham Vidal, estudiante de Ingeniería en
-            Informática y programador ReactJs. Como desarrollador Web Junior,
-            me encantaría poder formar parte de una empresa en donde pueda
-            aplicar todos mis conocimientos, y al mismo tiempo, que permita
-            desarrollarme profesionalmente. Soy una persona responsable, autocrítico, con capacidad 
-            de adaptación, disposición a aprender y apasionado por la programación y 
-            desarrollo de soluciones web.
+            Soy Abraham Vidal, estudiante de Ingeniería en Informática y
+            programador ReactJs. Como desarrollador Web Junior, me encantaría
+            poder formar parte de una empresa en donde pueda aplicar todos mis
+            conocimientos, y al mismo tiempo, que permita desarrollarme
+            profesionalmente. Soy una persona responsable, autocrítico, con
+            capacidad de adaptación, disposición a aprender y apasionado por la
+            programación y desarrollo de soluciones web.
           </Typography>
         </div>
       </div>
@@ -127,7 +127,6 @@ const About = (props) => {
       elements.push(element);
     }
     var container = React.createElement("div", { className: "scene" }, [
-     
       div2,
       back,
       div4,
@@ -136,7 +135,7 @@ const About = (props) => {
     ]);
 
     ReactDom.hydrate(container, contenedor);
-  },[me]);
+  }, [me]);
 
   return <div className="scene" id="scene"></div>;
 };
