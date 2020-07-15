@@ -3,12 +3,12 @@ import ReactDom from "react-dom";
 import { Typography, IconButton } from "@material-ui/core";
 import { Mail, GitHub, Instagram } from "@material-ui/icons";
 import forest from "../../resources/img/study10.png";
-import house from "../../resources/img/house3.png";
+import houseImg from "../../resources/img/house3.png";
 import universe from "../../resources/img/planets2.png";
 import "./About.css";
 
 const About = (props) => {
-  const { me } = props;
+  const { me, house } = props;
 
   const contacto = [
     {
@@ -45,8 +45,8 @@ const About = (props) => {
     const contenedor = document.getElementById("scene");
     const back = React.createElement(
       "div",
-      { className: "backImg" },
-      <img src={universe}></img>
+      { className:"backImg" },
+      <img src={universe} alt="universe" ></img>
     );
     const div = React.createElement(
       "div",
@@ -56,7 +56,7 @@ const About = (props) => {
     const div4 = React.createElement(
       "div",
       {},
-      <img src={house} alt="house" className="house" />
+      <img src={houseImg} alt="house" className={house} />
     );
     const div3 = React.createElement(
       "div",
@@ -135,7 +135,7 @@ const About = (props) => {
     ]);
 
     ReactDom.hydrate(container, contenedor);
-  }, [me]);
+  }, [me, house]);
 
   return <div className="scene" id="scene"></div>;
 };

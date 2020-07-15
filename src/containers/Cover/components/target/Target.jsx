@@ -20,7 +20,7 @@ const Target = () => {
         <div className="card-cover">
           <div className="title-target">
           <h2 className="target-hellow" >
-              Hola, yo soy
+              Hola, soy
             </h2>
             <h2 className="target-name" >
               <span>A</span>braham <span>V</span>idal

@@ -12,25 +12,38 @@ class App extends Component {
     this.state = {
       me: "hidden",
       top: "hidden",
+      house: "hidden",
     };
   }
-
+  authenticate(){
+    return new Promise(resolve => setTimeout(resolve, 2000)) // 2 seconds
+  }
   componentDidMount() {
+    this.authenticate().then(() => {
+      const ele = document.getElementById('ipl-progress-indicator')
+      if(ele){
+        // fade out
+        ele.classList.add('hidden')
+        setTimeout(() => {
+          // remove from DOM
+          ele.outerHTML = ''
+        }, 2000)
+      }
+    })
     window.onscroll = () => this.handleAnimation();
     console.log(document.documentElement.scrollTop)
+    console.log("ensamble")
   }
 
   handleAnimation = () => {
     if(document.documentElement.scrollTop > 500){
       this.setState({
-        me: 'me-visible',
-       
+       house: "house"
       });
     }
     if(document.documentElement.scrollTop < 490){
       this.setState({
-        me: 'hidden',
-       
+        house: "hidden"
       });
     }
   };
@@ -40,7 +53,7 @@ class App extends Component {
       
         <div>
         <Cover />
-        <About me={this.state.me} />
+        <About me={this.state.me} house={this.state.house}/>
         <JobExperience />
         <Knowledge />
         <Proyects />
