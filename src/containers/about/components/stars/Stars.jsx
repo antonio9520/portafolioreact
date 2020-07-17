@@ -7,7 +7,7 @@ const Stars = () => {
     const contenedor = document.getElementById("container-stars");
     let elements = [];
 
-    for (let i = 0; i < 350; i++) {
+    for (let i = 0; i < 500; i++) {
       let x = Math.floor(Math.random() * window.innerWidth);
       let y = Math.floor(Math.random() * window.innerHeight);
       let size = Math.random() * 2;
@@ -34,7 +34,7 @@ const Stars = () => {
     ReactDom.hydrate(starsElements, contenedor);
   },[]);
 
-  return <div id="container-stars"></div>;
+  return <div className="container-stars" id="container-stars"></div>;
 };
 
 export default Stars;

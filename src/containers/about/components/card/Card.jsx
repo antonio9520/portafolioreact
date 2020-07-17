@@ -12,7 +12,7 @@ const Card = (props) => {
             Sobre mi.
           </Typography>
           <Typography variant="body2" className="contenido">
-            Soy Abraham Vidal, estudiante de Ingeniería en Informática y
+            Soy estudiante de Ingeniería en Informática y
             programador ReactJs. Como desarrollador Web Junior, me encantaría
             poder formar parte de una empresa en donde pueda aplicar todos mis
             conocimientos, y al mismo tiempo, que permita desarrollarme

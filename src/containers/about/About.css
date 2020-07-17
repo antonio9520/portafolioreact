@@ -38,9 +38,9 @@
 
 .primera {
   position: absolute;
-  bottom: -20px;
-  right: -10px;
-  z-index: 500;
+  bottom: -24px;
+  right: -12px;
+  
   width: 100%;
   z-index: 1000;
   animation: movrl 2s infinite ease-in-out;
@@ -50,10 +50,51 @@
 .segunda {
   position: absolute;
   transition: 0.5s all;
-  left: 0;
+  left: -10px;
+  bottom: -20px;
   width: 100%;
   animation: movsegunda 2s infinite ease-in-out;
   animation-delay: .1s;
+  animation-direction: alternate;
+}
+.tercera{
+  position: absolute;
+  transition: 0.5s all;
+  left: -10px;
+  bottom: -10px;
+  width: 100%;
+  animation: movsegunda 2s infinite ease-in-out;
+  animation-delay: .5s;
+  animation-direction: alternate;
+}
+.cuarta{
+  position: absolute;
+  bottom: -20px;
+  right: -12px;
+  width: 100%;
+  
+  animation-delay: .5s;
+  animation: movrl 3s infinite ease-in-out;
+  animation-direction: alternate;
+}
+.quinta{
+  position: absolute;
+  transition: 0.5s all;
+  left: -10px;
+  bottom: 0;
+  width: 100%;
+  animation: movsegunda 3s infinite ease-in-out;
+  animation-delay: .3s;
+  animation-direction: alternate;
+}
+
+.sexta{
+  position: absolute;
+  
+  width: 100%;
+  bottom: 0;
+  animation-delay: .4s;
+  animation: movrl 2.5s infinite ease-in-out;
   animation-direction: alternate;
 }
 .scene i {
@@ -105,7 +146,7 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .forest {
+  /* .forest {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -113,7 +154,7 @@
     transform: scale(1);
     z-index: 100;
     transition: 0.5s;
-  }
+  } */
 
   .cont-typo-about-sub {
     position: absolute;
@@ -135,7 +176,7 @@
 }
 
 @media only screen and (min-width: 600px) and (max-width: 960px) {
-  .forest {
+  /* .forest {
     position: absolute;
     bottom: -30px;
     left: 0;
@@ -143,7 +184,7 @@
     transform: scale(0.8);
     z-index: 100;
     transition: 0.5s;
-  }
+  } */
 
   .cont-typo-about {
     display: flex;

@@ -1,4 +1,4 @@
-import React, {Fragment} from "react";
+import React, {Fragment, useEffect, useState} from "react";
 import { Grid, Hidden } from "@material-ui/core";
 import Layout from "../../components/Layout/Layout/Layout";
 import "./style.css";
@@ -14,7 +14,7 @@ import { DoubleArrow } from "@material-ui/icons";
 import { Link } from "react-scroll";
 
 const Cover = () => {
-  
+
   return (
     <Fragment>
       <Grid container className="body" id="Inicio">
@@ -47,13 +47,14 @@ const Cover = () => {
                 className="link"
                 to="scene"
                 spy={true}
-                smooth={true}
+                
                 offset={50}
                 duration={500}
               >
                 <p>Descubrir</p>
                 <DoubleArrow fontSize="large" className="icon" />
               </Link> 
+             
             </div>
           </Grid>
          
