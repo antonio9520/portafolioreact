@@ -9,6 +9,7 @@ import {
 } from "@material-ui/core";
 import { ExpandMore, GitHub, QueuePlayNext } from "@material-ui/icons";
 import LenguajeIcon from "./LenguajeIcon";
+import image from "../../../resources/img/portafolioimg.jpg"
 
 const useStyles = makeStyles((theme) => ({
   expand: {
@@ -45,7 +46,7 @@ const CardProyect = ({ proyecto }) => {
     <div className="container-targetProyect">
       <div className="cont-contenido-proyect">
         <div className="cont-img-card">
-          <img className="img-targetProyect" src={imageURL} alt="imagen"></img>
+          <img className="img-targetProyect" src={image} alt="imagen"></img>
         </div>
         <div className="cont-typo-proyect">
           <Typography className="name-proyect" variant="h5">

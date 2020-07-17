@@ -13,6 +13,8 @@ class App extends Component {
       me: "hidden",
       top: "hidden",
       house: "hidden",
+      card: "hidden",
+      contact: "hidden",
     };
   }
   authenticate(){
@@ -31,29 +33,33 @@ class App extends Component {
       }
     })
     window.onscroll = () => this.handleAnimation();
-    console.log(document.documentElement.scrollTop)
-    console.log("ensamble")
+    
   }
 
   handleAnimation = () => {
     if(document.documentElement.scrollTop > 500){
       this.setState({
-       house: "house"
+       card: "card-visible",
+       contact: "container-contacto"
       });
     }
     if(document.documentElement.scrollTop < 490){
       this.setState({
-        house: "hidden"
+        card: "hidden",
+        contact: "hidden",
       });
     }
+
   };
+
+ 
 
   render() {
     return (
       
         <div>
         <Cover />
-        <About me={this.state.me} house={this.state.house}/>
+        <About me={this.state.me} card={this.state.card} contact={this.state.contact}/>
         <JobExperience />
         <Knowledge />
         <Proyects />

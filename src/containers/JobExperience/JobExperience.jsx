@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from "react";
+import React, { useState, Fragment, useEffect } from "react";
 import "./JobExperience.css";
 import { Typography, IconButton, Hidden } from "@material-ui/core";
 import { LineEnd, LineStart, Line, CardArrow, LineItem } from "./components";
@@ -15,7 +15,10 @@ const JobExperience = () => {
   // const [time, setTime] = useState(false);
   const [collapse, setCollapse] = useState(true);
   // const timeToClear = useRef(false);
-
+useEffect(() => {
+  const scene = document.getElementById("scene")
+  console.log(scene)
+})
   const changeImage = () => {
     // setImage(img);
     rotarImagen();
