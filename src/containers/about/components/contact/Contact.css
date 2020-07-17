@@ -1,79 +1,74 @@
 .container-contacto {
-    position: absolute;
-    right: -10px;
-    top: 150px;
-    z-index: 1501;
-    display: inline-flex;
-    flex-direction: column;
-    background-color: rgb(255, 255, 255);
-    border-radius: 5px;
-    padding: 20px 10px;
-    opacity: .9;
-    animation-name: animationMenu;
-    animation-duration: .5s;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
-  }
-  .cont-sub-contacto{
-    display: inline-flex;
-    justify-content: flex-end;
-  }
-  .cont-left {
-    color: white;
-    padding: 15px 10px;
-   
-  }
-  
-  .cont-left .typo-contacto{
-  letter-spacing: 1px;
-  }
-  
-  .cont-right {
-    padding: 10px 15px;
-  }
-  
-  .cont-right .icon-btn-contacto {
-    color: #ffffff;
-    background-color: rgb(99, 99, 99);
-    animation: animationIconReverse .5s linear ;
-   
-  }
-  
-  .cont-right .icon-btn-contacto:hover {
-    color: #555555;
-    background-color: white;
-    animation: animationIcon .5s linear ;
-  }
-  
-  @keyframes animationIcon {
-    0%{
-      transform: rotate(0);
-    }
-    100%{
-      transform: rotate(360deg);
-    }
-  }
-  @keyframes animationIconReverse {
-    0%{
-      transform: rotate(360deg);
-    }
-    100%{
-      transform: rotate(0);
-    }
-  }
+  position: absolute;
+  right: -10px;
+  top: 150px;
+  z-index: 1501;
+  display: inline-flex;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  padding: 20px 10px;
+  animation-name: animationMenu;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+.cont-sub-contacto {
+  display: inline-flex;
+  justify-content: flex-end;
+}
+.cont-left {
+  color: white;
+  padding: 15px 10px;
+}
 
-  @keyframes animationMenu {
-   
-        0% {
-            opacity: 0.5;
-            transform:translateX(100px) 
-        }
-        50% {
-            opacity: 0.7;
-        }
-        100% {
-            opacity: 1;
-            transform: translateX(0) ;
-        }
-      
+.cont-left .typo-contacto {
+  letter-spacing: 1px;
+}
+
+.cont-right {
+  padding: 10px 15px;
+}
+
+.cont-right .icon-btn-contacto {
+  color: #ffffff;
+  background-color: rgb(99, 99, 99);
+  animation: animationIconReverse 0.5s linear;
+}
+
+.cont-right .icon-btn-contacto:hover {
+  color: #555555;
+  background-color: white;
+  animation: animationIcon 0.5s linear;
+}
+
+@keyframes animationIcon {
+  0% {
+    transform: rotate(0);
   }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes animationIconReverse {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes animationMenu {
+  0% {
+    opacity: 0.5;
+    transform: translateX(100px);
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0.9;
+    transform: translateX(0);
+  }
+}

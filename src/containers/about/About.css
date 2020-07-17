@@ -36,29 +36,49 @@
   display: none;
 }
 
-.bottomMountain {
+.primera {
+  position: absolute;
+  bottom: -20px;
+  right: -10px;
+  z-index: 500;
+  width: 100%;
+  z-index: 1000;
+  animation: movrl 2s infinite ease-in-out;
+  animation-direction: alternate;
+
+}
+.segunda {
   position: absolute;
   transition: 0.5s all;
   left: 0;
   width: 100%;
-}
-
-.house {
-  position: absolute;
-  bottom: 0;
-  z-index: 500;
-  width: 100%;
-  z-index: 1000;
-  animation-name: cardOne;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards;
+  animation: movsegunda 2s infinite ease-in-out;
+  animation-delay: .1s;
+  animation-direction: alternate;
 }
 .scene i {
   position: absolute;
   background-color: #fff;
   border-radius: 50%;
   animation: animate linear infinite;
+}
+
+@keyframes movrl {
+  0%{
+    transform: rotate(-2deg);
+  }
+  100%{
+    transform: rotate(2deg);
+  }
+}
+
+@keyframes movsegunda{
+  0%{
+    transform: rotate(2deg);
+  }
+  100%{
+    transform: rotate(-2deg);
+  }
 }
 
 @keyframes animate {
