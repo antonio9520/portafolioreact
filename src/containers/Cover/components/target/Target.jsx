@@ -26,19 +26,6 @@ const Target = () => {
               <span>A</span>braham <span>V</span>idal
             </h2>
             <p class="line anim-typewriter">Desarrollador ReactJs......!!</p>
-            <div style={{ width: "100%", textAlign: "center" }}>
-              {/* <Link
-                activeClass="active"
-                className="link"
-                to="scene"
-                spy={true}
-                smooth={true}
-                offset={50}
-                duration={500}
-              >
-                <DoubleArrow fontSize="large" className="icon" />
-              </Link> */}
-            </div>
           </div>
         </div>
       </Grid>

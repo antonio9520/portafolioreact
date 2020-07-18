@@ -6,7 +6,7 @@ import { Grid } from "@material-ui/core";
 import { School, Visibility, VisibilityOff } from "@material-ui/icons";
 import { CSSTransition } from "react-transition-group";
 import img2 from "../../resources/img/duoc.jpg";
-import duoc2 from "../../resources/img/duoc2.jpg";
+import duoc2 from "../../resources/img/duoc2.jpg"; 
 import duoc3 from "../../resources/img/duoc3.jpg";
 import CardExperience from "./mdUp/CardExperience";
 

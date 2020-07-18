@@ -41,7 +41,14 @@
   background-color: white;
   animation: animationIcon 0.5s linear;
 }
-
+.btn-contact-active{
+  position: absolute;
+  transform: rotate(-90deg);
+  right: -55px;
+  background: white;
+  border-radius: 5px;
+  padding: 10px 15px;
+}
 @keyframes animationIcon {
   0% {
     transform: rotate(0);

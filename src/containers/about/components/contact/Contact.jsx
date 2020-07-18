@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState, Fragment } from "react";
 import "./Contact.css";
 import { IconButton } from "@material-ui/core";
 import { Mail, GitHub, Instagram } from "@material-ui/icons";
 
 const Contact = (props) => {
-    const { contact } = props;
+  const { contact } = props;
+  const [open, setOpen] = useState(false);
   const contacto = [
     {
       icon: <Mail />,
@@ -31,24 +32,38 @@ const Contact = (props) => {
       title: "Ir a perfil",
     },
   ];
-
+  const handleOpen = () => {
+    setOpen(!open);
+  };
   return (
-    <div className={contact}>
-      {contacto.map((contact, i) => (
-        <div key={i} className="cont-sub-contacto">
-          <div className="cont-right">
-            <IconButton
-              href={contact.link}
-              title={contact.title}
-              target={contact.target}
-              className="icon-btn-contacto"
-            >
-              {contact.icon}
-            </IconButton>
+    <Fragment>
+      <div className={contact}>
+        <div
+          className={open ? "btn-contact-inact" : "btn-contact-active"}
+          onClick={handleOpen}
+        >
+          <div className="cont-title-about">
+            <h2 className="titulo">Contacto</h2>
           </div>
         </div>
-      ))}
-    </div>
+        <div onClick={handleOpen}>
+          {contacto.map((contact, i) => (
+            <div key={i} className="cont-sub-contacto">
+              <div className="cont-right">
+                <IconButton
+                  href={contact.link}
+                  title={contact.title}
+                  target={contact.target}
+                  className="icon-btn-contacto"
+                >
+                  {contact.icon}
+                </IconButton>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </Fragment>
   );
 };
 
