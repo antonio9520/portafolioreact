@@ -21,14 +21,14 @@ const About = (props) => {
       <div className="backImg">
         <img src={universe} alt="universe"></img>
       </div>
-      <Stars />
-      <div>
+      <Stars /> 
+       <div>
       <img src={primera}  style={{  zIndex: 1100 }} alt="primera" className="primera" />
       </div>
       <Card card={card}/>
       <Contact contact={contact}/>
        <div>
-        <img
+       <img
           src={segunda}
           alt="segunda"
           style={{  zIndex: 1090 }}
@@ -71,8 +71,9 @@ const About = (props) => {
           className="sexta"
           id="mountain-bottom"
         />
-      </div> 
+      </div>  
     </div>
+   
   );
 };
 

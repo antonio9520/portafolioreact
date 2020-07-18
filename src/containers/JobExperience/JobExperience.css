@@ -1,12 +1,12 @@
 .container-job {
   padding: 0;
-  background: rgb(51, 112, 65);
+  /* background: rgb(51, 112, 65);
   background: radial-gradient(
     circle,
     rgba(51, 112, 65, 1) 0%,
     rgba(17, 27, 17, 1) 100%
     
-  );
+  ); */
   top: 0;
   margin: 0;
   position: relative;

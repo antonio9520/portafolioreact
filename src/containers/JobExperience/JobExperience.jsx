@@ -49,7 +49,7 @@ useEffect(() => {
           <img className="img-job" alt="jobExp" src={image}></img>
         ) : null}
 
-        <div className="overlay-job"></div>
+        {/* <div className="overlay-job"></div> */}
         <div className="cont-body-job">
           <Typography
             variant="h4"

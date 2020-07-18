@@ -104,14 +104,14 @@ const Knowledge = () => {
     <div className="container-Know" id="knowledge">
      
       <div className="overlay-know"></div>
-      <CSSTransition classNames="transition-know"
+      {/* <CSSTransition classNames="transition-know"
             in={collapse}
             unmountOnExit
             timeout={2000}>
               <Hidden smDown>
          <img className="img-know" src={img} alt="img-know"></img>
          </Hidden>
-      </CSSTransition>
+      </CSSTransition> */}
 
       <div className="cont-body-know">
         <Grid container>

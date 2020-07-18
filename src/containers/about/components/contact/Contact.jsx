@@ -8,25 +8,25 @@ const Contact = (props) => {
   const [open, setOpen] = useState(false);
   const contacto = [
     {
-      icon: <Mail />,
+      icon: <Mail className="icon-contacto"/>,
       target: "",
       link: "mailto:antonio.vidal95@hotmail.com",
       title: "Enviar correo a antonio.vidal95@hotmail.com",
     },
     {
-      icon: <Mail />,
+      icon: <Mail className="icon-contacto"/>,
       target: "",
       link: "mailto:abrvc95@gmail.com",
       title: "Enviar correo a abrvc95@gmail.com",
     },
     {
-      icon: <GitHub />,
+      icon: <GitHub className="icon-contacto"/>,
       target: "_blank",
       link: "https://github.com/antonio9520",
       title: "Ir a Perfil",
     },
     {
-      icon: <Instagram />,
+      icon: <Instagram className="icon-contacto"/>,
       target: "_blank",
       link: "https://www.instagram.com/abraham.antonio95/?hl=es-la",
       title: "Ir a perfil",
@@ -37,16 +37,20 @@ const Contact = (props) => {
   };
   return (
     <Fragment>
-      <div className={contact}>
+      <div className={contact} onClick={handleOpen}>
         <div
           className={open ? "btn-contact-inact" : "btn-contact-active"}
-          onClick={handleOpen}
+          
         >
           <div className="cont-title-about">
-            <h2 className="titulo">Contacto</h2>
+            <h2 className="titulo-contact">Contacto.</h2>
           </div>
         </div>
-        <div onClick={handleOpen}>
+        <div className={open ? "cont-card-contact" : "cont-card-contact-inact"}>
+        <div className="cont-title-about-active">
+            <h2 className="titulo-contact-active">Contacto.</h2>
+          </div>
+          <div className="cont-contenido-contact">
           {contacto.map((contact, i) => (
             <div key={i} className="cont-sub-contacto">
               <div className="cont-right">
@@ -61,6 +65,7 @@ const Contact = (props) => {
               </div>
             </div>
           ))}
+          </div>
         </div>
       </div>
     </Fragment>

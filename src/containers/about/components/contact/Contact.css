@@ -4,26 +4,11 @@
   top: 150px;
   z-index: 1501;
   display: inline-flex;
-  flex-direction: column;
-  background-color: rgb(255, 255, 255);
-  border-radius: 5px;
-  padding: 20px 10px;
-  animation-name: animationMenu;
-  animation-duration: 0.5s;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards;
+  cursor: pointer;
 }
 .cont-sub-contacto {
   display: inline-flex;
   justify-content: flex-end;
-}
-.cont-left {
-  color: white;
-  padding: 15px 10px;
-}
-
-.cont-left .typo-contacto {
-  letter-spacing: 1px;
 }
 
 .cont-right {
@@ -31,38 +16,110 @@
 }
 
 .cont-right .icon-btn-contacto {
-  color: #ffffff;
-  background-color: #000000;
+  color: #a81f1f;
+  background: #ffffff;
   animation: animationIconReverse 0.5s linear;
+  -webkit-box-shadow: 1px 11px 10px -1px rgba(0, 0, 0, 0.92);
+  box-shadow: 1px 11px 18px -1px rgba(0, 0, 0, 0.92);
+  animation-fill-mode: forwards;
+  transition: .5s ease-in-out
 }
 
 .cont-right .icon-btn-contacto:hover {
-  color: #555555;
-  background-color: white;
-  animation: animationIcon 0.5s linear;
+  color: white;
+  background-color: #7cd765;
+  transition: .5s ease-in-out
 }
-.btn-contact-active{
+.icon-contacto{
+  color: #3a3a3a;
+  transition: .5s ease-in-out;
+ 
+
+}
+.icon-contacto:hover {
+  color: #ffffff;
+  animation: animationBtnIcon 0.5s ease-in-out;
+  animation-fill-mode: forwards;
+  transition: .5s ease-in-out;
+}
+.btn-contact-active {
   position: absolute;
   transform: rotate(-90deg);
   right: -55px;
   background: white;
   border-radius: 5px;
   padding: 10px 15px;
+  transition: 1s ease-in-out;
+  -webkit-box-shadow: 1px 11px 18px -1px rgba(0, 0, 0, 0.92);
+  box-shadow: 1px 11px 18px -1px rgba(0, 0, 0, 0.92);
 }
-@keyframes animationIcon {
+.btn-contact-inact {
+  position: absolute;
+  transform: rotate(-90deg);
+  right: -500px;
+  background: white;
+  border-radius: 5px;
+  padding: 10px 15px;
+  transition: 1s ease-in-out;
+}
+.titulo-contact {
+  color: #7cd765;
+  border-radius: 5px;
+  text-align: center;
+  padding-bottom: 10px;
+  margin-top: -10px;
+  font-weight: 400;
+  font-family: "Oswald", sans-serif;
+  font-size: 2em;
+  transition: 0.5s all ease-in-out;
+}
+.titulo-contact-active {
+  color: #7cd765;
+  padding-bottom: 10px;
+  margin-top: -10px;
+  font-weight: 400;
+  font-family: "Oswald", sans-serif;
+  font-size: 2.5em;
+  transition: 0.5s all ease-in-out;
+  border-bottom: 2px solid #7cd765;
+}
+
+.cont-card-contact {
+  position: absolute;
+  right: 40px;
+  top: -50px;
+  background: white;
+  display: inline-block;
+  padding: 30px;
+  opacity: 1;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 11px 18px -1px rgba(0, 0, 0, 0.92);
+  box-shadow: 1px 11px 18px -1px rgba(0, 0, 0, 0.92);
+  transition: 1s ease-in-out;
+}
+.cont-contenido-contact {
+  display: inline-flex;
+}
+
+.cont-card-contact-inact {
+  position: absolute;
+  right: -500px;
+  top: -50px;
+  background: white;
+  display: inline-block;
+  opacity: 0;
+  padding: 30px;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 11px 18px -1px rgba(0, 0, 0, 0.92);
+  box-shadow: 1px 11px 18px -1px rgba(0, 0, 0, 0.92);
+  transition: 1s ease-in-out;
+}
+@keyframes animationBtnIcon {
   0% {
     transform: rotate(0);
   }
   100% {
     transform: rotate(360deg);
-  }
-}
-@keyframes animationIconReverse {
-  0% {
-    transform: rotate(360deg);
-  }
-  100% {
-    transform: rotate(0);
   }
 }
 
@@ -75,7 +132,7 @@
     opacity: 0.7;
   }
   100% {
-    opacity: 0.9;
+    opacity: 1;
     transform: translateX(0);
   }
 }
