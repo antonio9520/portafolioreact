@@ -43,7 +43,7 @@
   
   width: 100%;
   z-index: 1000;
-  animation: movrl 2s infinite ease-in-out;
+  animation: movrl 4s infinite ease-in-out;
   animation-direction: alternate;
 
 }
@@ -53,7 +53,7 @@
   left: -10px;
   bottom: -20px;
   width: 100%;
-  animation: movsegunda 2s infinite ease-in-out;
+  animation: movsegunda 4s infinite ease-in-out;
   animation-delay: .1s;
   animation-direction: alternate;
 }
@@ -63,8 +63,8 @@
   left: -10px;
   bottom: -10px;
   width: 100%;
-  animation: movsegunda 2s infinite ease-in-out;
-  animation-delay: .5s;
+  animation: movsegunda 5s infinite ease-in-out;
+  animation-delay: .7s;
   animation-direction: alternate;
 }
 .cuarta{
@@ -73,8 +73,8 @@
   right: -12px;
   width: 100%;
   
-  animation-delay: .5s;
-  animation: movrl 3s infinite ease-in-out;
+  animation-delay: 1.2s;
+  animation: movrl 6s infinite ease-in-out;
   animation-direction: alternate;
 }
 .quinta{
@@ -83,8 +83,8 @@
   left: -10px;
   bottom: 0;
   width: 100%;
-  animation: movsegunda 3s infinite ease-in-out;
-  animation-delay: .3s;
+  animation: movsegunda 4s infinite ease-in-out;
+  animation-delay: 1s;
   animation-direction: alternate;
 }
 
@@ -94,7 +94,7 @@
   width: 100%;
   bottom: 0;
   animation-delay: .4s;
-  animation: movrl 2.5s infinite ease-in-out;
+  animation: movrl 4.4s infinite ease-in-out;
   animation-direction: alternate;
 }
 .scene i {

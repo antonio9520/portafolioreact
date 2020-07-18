@@ -8,10 +8,10 @@ const Card = (props) => {
       <div className="cont-typo-about-sub">
         <div className="overlay-about"></div>
         <div className="cont-title-about">
-          <Typography variant="h4" className="titulo">
+          <h2  className="titulo">
             Sobre mi.
-          </Typography>
-          <Typography variant="body2" className="contenido">
+          </h2>
+          <p className="contenido">
             Soy estudiante de Ingeniería en Informática y
             programador ReactJs. Como desarrollador Web Junior, me encantaría
             poder formar parte de una empresa en donde pueda aplicar todos mis
@@ -19,7 +19,7 @@ const Card = (props) => {
             profesionalmente. Soy una persona responsable, autocrítico, con
             capacidad de adaptación, disposición a aprender y apasionado por la
             programación y desarrollo de soluciones web.
-          </Typography>
+          </p>
         </div>
       </div>
     </div>
