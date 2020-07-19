@@ -1,45 +1,44 @@
-import React, { useState, Fragment, useEffect } from "react";
+import React, { useState, Fragment, useEffect, useRef } from "react";
 import "./JobExperience.css";
-import { Typography, IconButton, Hidden } from "@material-ui/core";
+import { IconButton, Hidden } from "@material-ui/core";
+import { BtnLink } from "../../components";
 import { LineEnd, LineStart, Line, CardArrow, LineItem } from "./components";
 import { Grid } from "@material-ui/core";
 import { School, Visibility, VisibilityOff } from "@material-ui/icons";
 import { CSSTransition } from "react-transition-group";
 import img2 from "../../resources/img/duoc.jpg";
-import duoc2 from "../../resources/img/duoc2.jpg"; 
+import duoc2 from "../../resources/img/duoc2.jpg";
 import duoc3 from "../../resources/img/duoc3.jpg";
 import CardExperience from "./mdUp/CardExperience";
 
 const JobExperience = () => {
   const [image, setImage] = useState();
-  // const [time, setTime] = useState(false);
+  const [time, setTime] = useState(false);
   const [collapse, setCollapse] = useState(true);
-  // const timeToClear = useRef(false);
-useEffect(() => {
-  const scene = document.getElementById("scene")
-  console.log(scene)
-})
+  const timeToClear = useRef(false);
+  useEffect(() => {
+    const scene = document.getElementById("scene");
+    console.log(scene);
+  });
   const changeImage = () => {
     // setImage(img);
     rotarImagen();
-    // timeToClear.current = window.setInterval(() => rotarImagen(), 10000);
+    timeToClear.current = window.setInterval(() => rotarImagen(), 10000);
   };
 
   var contador = 0;
   let rotarImagen = () => {
-   
-      let misImagenes = [duoc2, img2,  duoc3];
-      setImage(misImagenes[contador]);
-      contador++;
-      if (contador === 3) contador = 0;
-   
+    let misImagenes = [duoc2, img2, duoc3];
+    setImage(misImagenes[contador]);
+    contador++;
+    if (contador === 3) contador = 0;
   };
 
   const handleClick = () => {
     setCollapse(!collapse);
-    // setTime(!time);
-    // window.clearInterval(timeToClear.current);
-     setImage(null);
+    setTime(!time);
+    window.clearInterval(timeToClear.current);
+    setImage(null);
   };
 
   return (
@@ -49,11 +48,9 @@ useEffect(() => {
           <img className="img-job" alt="jobExp" src={image}></img>
         ) : null}
 
-        <div className="overlay-job"></div> 
+        <div className="overlay-job"></div>
         <div className="cont-body-job">
-          <h2
-            className={collapse ? "job-title-active" : "job-title"}
-          >
+          <h2 className={collapse ? "job-title-active" : "job-title"}>
             Experiencia
           </h2>
           <div className={collapse ? "cont-show-btn-active" : "cont-show-btn"}>
@@ -81,7 +78,6 @@ useEffect(() => {
                   </Grid>
                   <Grid item xs={2} sm={2} md={2}>
                     <CardArrow
-                     
                       changeImage={changeImage}
                       icon={<School />}
                       image={image}
@@ -146,6 +142,7 @@ useEffect(() => {
             </CSSTransition>
           </Hidden>
         </div>
+        <BtnLink p="" link="knowledge"/>
       </div>
     </Fragment>
   );

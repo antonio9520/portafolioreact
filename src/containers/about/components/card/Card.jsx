@@ -26,7 +26,9 @@ const Card = (props) => {
               disposición a aprender y apasionado por la programación y
               desarrollo de soluciones web.
             </p>
+           
           </div>
+          <p className="msg-cerrar">click para cerrar</p>
         </div>
      
      

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Knowledge.css";
 import { Grid, IconButton } from "@material-ui/core";
+import {BtnLink} from "../../components";
 import Categories from "./components/categories";
 import KnowItem from "./components/KnowItem";
 import {
@@ -14,7 +15,7 @@ import {
 import { CSSTransition } from "react-transition-group";
 
 const Knowledge = () => {
-  const [collapse, setCollapse] = useState(true);
+  const [collapse, setCollapse] = useState(false);
 
   const languages = [
     {
@@ -172,6 +173,7 @@ const Knowledge = () => {
           </CSSTransition>
         </Grid>
       </div>
+      <BtnLink p="" link="proyects"/>
     </div>
   );
 };

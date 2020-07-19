@@ -1,12 +1,11 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { Fragment } from "react";
 import { Grid } from "@material-ui/core";
 import "./style.css";
+import { BtnLink } from "../../components";
 import Target from "./components/target/Target";
-import { DoubleArrow } from "@material-ui/icons";
-import { Link } from "react-scroll";
 
 const Cover = () => {
-  return ( 
+  return (
     <Fragment>
       <Grid container className="body" id="Inicio">
         <Grid container className="container-Info">
@@ -14,19 +13,7 @@ const Cover = () => {
             <div className="vidContent">
               <Target />
             </div>
-            <div className="div-discover">
-              <Link
-                activeClass="active"
-                className="link"
-                to="scene"
-                spy={true}
-                offset={50}
-                duration={500}
-              >
-                <p>Descubrir</p>
-                <DoubleArrow fontSize="large" className="icon" />
-              </Link>
-            </div>
+            <BtnLink p="descubrir" link="scene"/>
           </Grid>
         </Grid>
       </Grid>

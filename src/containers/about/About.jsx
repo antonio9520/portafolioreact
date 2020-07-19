@@ -1,9 +1,6 @@
-import React, { useEffect, Fragment, useState } from "react";
+import React  from "react";
 import universe from "../../resources/img/planets2.png";
 import universexs from "../../resources/img/planetsxs.png";
-import notSky from "../../resources/img/notSky.png";
-import mountaintop from "../../resources/img/mountaintop.png";
-import bottomMountain from "../../resources/img/mountainsBottom.png";
 import primera from "../../resources/img/primera.png";
 import segunda from "../../resources/img/segunda.png";
 import tercera from "../../resources/img/tercera.png";
@@ -13,6 +10,7 @@ import sexta from "../../resources/img/sexta.png";
 import primeraxs from "../../resources/img/primeraxs.png";
 import "./About.css";
 import { Stars, Card, Contact } from "./components";
+import { BtnLink } from "../../components"
 
 const About = (props) => {
   const { me, card, contact } = props;
@@ -25,7 +23,7 @@ const About = (props) => {
       <div className="backImgxs">
         <img src={universexs} alt="universe"></img>
       </div>
-      <div>
+     <div>
         <img
           src={primeraxs}
           alt="segunda"
@@ -36,7 +34,8 @@ const About = (props) => {
      
       <Card card={card} />
       <Contact contact={contact} />
-      <Stars />
+      <BtnLink p="" link="experience" />
+      {/*  <Stars />
 
      <div>
         <img
@@ -91,7 +90,7 @@ const About = (props) => {
           className="sexta"
           id="mountain-bottom"
         />
-      </div>   
+      </div>    */}
     </div>
   );
 };

@@ -9,6 +9,7 @@
   animation-fill-mode: forwards;
   justify-content: center;
   display: flex;
+  cursor: pointer;
 }
 
 .hidden {
@@ -106,6 +107,23 @@
 .contenido {
   display: none;
   transition: 0.5s all ease-in-out;
+}
+.msg-cerrar{
+  position: absolute;
+  bottom: 0;
+  right: 30px;
+  animation: animsg 2s ease-in-out infinite;
+  animation-direction: alternate;
+  animation-delay: 10s;
+  opacity: 0;
+}
+@keyframes animsg{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: .8;
+  }
 }
 
 @keyframes cardOne {
