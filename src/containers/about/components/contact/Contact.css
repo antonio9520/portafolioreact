@@ -1,10 +1,15 @@
 .container-contacto {
-  position: absolute;
-  right: -10px;
-  top: 150px;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   z-index: 1501;
-  display: inline-flex;
+  height: 100%;
+  width: 100%;
+  display: flex;
   cursor: pointer;
+  justify-content: center;
 }
 .cont-sub-contacto {
   display: inline-flex;
@@ -16,7 +21,7 @@
 }
 
 .cont-right .icon-btn-contacto {
-  color: #a81f1f;
+ 
   background: #ffffff;
   animation: animationIconReverse 0.5s linear;
   -webkit-box-shadow: 1px 11px 10px -1px rgba(0, 0, 0, 0.92);
@@ -45,7 +50,8 @@
 .btn-contact-active {
   position: absolute;
   transform: rotate(-90deg);
-  right: -55px;
+  top: 150px;
+  right: -60px;
   background: white;
   border-radius: 5px;
   padding: 10px 15px;
@@ -57,6 +63,7 @@
   position: absolute;
   transform: rotate(-90deg);
   right: -500px;
+  top: 150px;
   background: white;
   border-radius: 5px;
   padding: 10px 15px;
@@ -86,8 +93,9 @@
 
 .cont-card-contact {
   position: absolute;
-  right: 40px;
-  top: -50px;
+ top: 0;
+ right: 40px;
+  width: 310px;
   background: white;
   display: inline-block;
   padding: 30px;
@@ -104,7 +112,6 @@
 .cont-card-contact-inact {
   position: absolute;
   right: -500px;
-  top: -50px;
   background: white;
   display: inline-block;
   opacity: 0;
@@ -134,5 +141,45 @@
   100% {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@media (max-width: 600px){
+  .titulo-contact-active {
+      display: none;
+  }
+  .cont-card-contact {
+    position: absolute;
+    width: 100%;
+    right: 0;
+    left: 0;
+    top: 40px;
+    background: white;
+    display: inline-block;
+    padding: 5px;
+    opacity: 1;
+    -webkit-box-shadow: 1px 11px 18px -1px rgba(0, 0, 0, 0.92);
+    box-shadow: 1px 11px 18px -1px rgba(0, 0, 0, 0.92);
+    transition: 1s ease-in-out;
+    text-align: center;
+  }
+  .cont-sub-contacto{
+     bottom: 0;
+  }
+  .cont-card-contact-inact {
+    width: 100%;
+    left: 0;
+    right: 0;
+    position: absolute;
+    top: -500px;
+    background: white;
+    display: inline-block;
+    opacity: 0;
+    padding: 30px;
+   
+    -webkit-box-shadow: 1px 11px 18px -1px rgba(0, 0, 0, 0.92);
+    box-shadow: 1px 11px 18px -1px rgba(0, 0, 0, 0.92);
+    transition: 1s ease-in-out;
+    text-align: center;
   }
 }

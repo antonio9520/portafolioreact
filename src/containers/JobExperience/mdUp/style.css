@@ -1,0 +1,17 @@
+.title-card-md{
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    font-size: 2em;
+    padding: 0;
+    margin: 0;
+}
+
+.desc-card-md{
+    font-size: 20px;
+    text-align: justify;
+    font-family: "Open Sans Condensed", sans-serif;
+}
+
+.año-card-md{
+    margin-top: 5px;
+}

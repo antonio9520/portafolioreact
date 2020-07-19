@@ -2,6 +2,7 @@
   position: relative;
   width: 100%;
   min-height: 115vh;
+  overflow: hidden;
 }
 
 .backImg {
@@ -34,6 +35,17 @@
 
 .hidden {
   display: none;
+}
+.primeraxs{
+  position: absolute;
+  animation-delay: .4s;
+  animation: movrl 4.4s infinite ease-in-out;
+  animation-direction: alternate;
+  left: -15px;
+  width: 110%;
+  bottom: -5px;
+  overflow: hidden;
+  height: 110%;
 }
 
 .primera {
@@ -146,45 +158,12 @@
 }
 
 @media only screen and (max-width: 600px) {
-  /* .forest {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    transform: scale(1);
-    z-index: 100;
-    transition: 0.5s;
-  } */
 
-  .cont-typo-about-sub {
-    position: absolute;
-    width: 350px;
-    right: 30px;
-    top: 50px;
-    color: white;
-  }
 
-  .container-contacto {
-    position: absolute;
-    width: 100%;
-    top: 30px;
-    z-index: 1501;
-    justify-content: center;
-    display: inline-flex;
-    flex-direction: row;
-  }
 }
 
 @media only screen and (min-width: 600px) and (max-width: 960px) {
-  /* .forest {
-    position: absolute;
-    bottom: -30px;
-    left: 0;
-    width: 100%;
-    transform: scale(0.8);
-    z-index: 100;
-    transition: 0.5s;
-  } */
+ 
 
   .cont-typo-about {
     display: flex;

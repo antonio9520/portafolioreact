@@ -1,6 +1,5 @@
 import React from "react";
-import { Grid, makeStyles, Typography } from "@material-ui/core";
-import { DoubleArrow } from "@material-ui/icons";
+import { Grid, makeStyles} from "@material-ui/core";
 import "./Target.css";
 import { Link } from "react-scroll";
 
@@ -8,13 +7,14 @@ const style = {
   containerTarget: {
     borderRadius: "10px",
     position: "relative",
-   
+    backgroundColor: "green",
+    top: 0,
   },
 };
 const useStyle = makeStyles(style);
 const Target = () => {
   const classes = useStyle();
-  return (
+  return ( 
     <Grid container justify="center" className={classes.containerTarget}>
       <Grid item xs={12} sm={12} md={10} className="itemTarget">
         <div className="card-cover">

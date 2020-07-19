@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
 const CardProyect = ({ proyecto }) => {
   const {
     imageURL,
-    nombre,
+    titulo,
     lenguajes,
     descripcion,
     proyectURL,
@@ -50,7 +50,7 @@ const CardProyect = ({ proyecto }) => {
         </div>
         <div className="cont-typo-proyect">
           <Typography className="name-proyect" variant="h5">
-            {nombre}
+            {titulo}
           </Typography>
           <div className="container-icons">
             {lenguajes.map((lenguaje, i) => (

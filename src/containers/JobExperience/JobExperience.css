@@ -1,12 +1,12 @@
 .container-job {
   padding: 0;
-  /* background: rgb(51, 112, 65);
+  background: rgb(51, 112, 65);
   background: radial-gradient(
     circle,
     rgba(51, 112, 65, 1) 0%,
     rgba(17, 27, 17, 1) 100%
     
-  ); */
+  );
   top: 0;
   margin: 0;
   position: relative;
@@ -20,6 +20,9 @@
   text-align: center;
   color: white;
   transition: 2s all ease;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 3em;
 }
 .job-title-active {
   padding-top: 5%;
@@ -27,6 +30,9 @@
   text-align: center;
   color: white;
   transition: 2s all ease;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 3em;
 }
 .btn-show-job {
   color: white;
@@ -299,3 +305,15 @@
 
 /************************************************/
 
+@media (max-width: 600px){
+  .cont-show-btn-active{
+    display: none;
+  }
+  .cont-show-btn{
+    display: none;
+  }
+  .job-title-active{
+    padding-top: 80px;
+    padding-bottom: 50px;;
+  }
+}

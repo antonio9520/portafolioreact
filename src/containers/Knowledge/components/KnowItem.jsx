@@ -8,14 +8,14 @@ const KnowItem = (props) => {
     <div className="container-knowItem">
       <div className="cont-icon-know">{icon}</div>
       <div className="cont-typo-know">
-        <Typography variant="h5" className="title-know-item">
+        <h2  className="title-know-item">
           {title}
-        </Typography>
+        </h2>
         <div className="cont-items-know">
           {list.map((list, index) => (
             <div key={index} className="cont-avatar-know">
               <Avatar className={list.className}>{list.avatar}</Avatar>
-              <Typography variant="body1">{list.typo}</Typography>
+              <p>{list.typo}</p>
             </div>
           ))}
          

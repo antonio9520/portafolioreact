@@ -2,6 +2,7 @@
   width: 100%;
   min-height: 115vh;
   position: relative;
+  padding-bottom: 100px ;
 }
 
 .img-know {
@@ -22,6 +23,9 @@
   color: white;
   text-align: center;
   transition: 2s all ease;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 3em;
 }
 .title-know-active {
   padding-top: 5%;
@@ -29,6 +33,9 @@
   text-align: center;
   color: white;
   transition: 2s all ease;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 3em;
 }
 .show-btn-know {
   width: 100%;
@@ -84,12 +91,11 @@
 }
 
 
-@media only screen and (max-width: 600px) {
-  
-}
-@media only screen and (min-width: 600px){
- 
-}
-@media only screen and (min-width: 960px) {
-
+@media  (max-width: 600px) {
+  .title-know-active {
+   padding-top: 80px ;
+  }
+  .show-btn-know-active{
+    display: none;
+  }
 }

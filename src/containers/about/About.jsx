@@ -9,6 +9,7 @@ import tercera from "../../resources/img/tercera.png"
 import cuarta from "../../resources/img/cuarta.png"
 import quinta from "../../resources/img/quinta.png"
 import sexta from "../../resources/img/sexta.png"
+import primeraxs from "../../resources/img/primeraxs.png"
 import "./About.css";
 import { Stars, Card, Contact } from "./components";
 
@@ -21,7 +22,19 @@ const About = (props) => {
       <div className="backImg">
         <img src={universe} alt="universe"></img>
       </div>
-      <Stars /> 
+      <div>
+       <img
+          src={primeraxs}
+          alt="segunda"
+          style={{  zIndex: 1090 }}
+          className="primeraxs"
+          
+        />
+      </div>  
+      {/* <Contact contact={contact}/> */}
+      <Card card={card}/>
+     
+      {/* <Stars /> 
        <div>
       <img src={primera}  style={{  zIndex: 1100 }} alt="primera" className="primera" />
       </div>
@@ -71,7 +84,7 @@ const About = (props) => {
           className="sexta"
           id="mountain-bottom"
         />
-      </div>  
+      </div>   */}
     </div>
    
   );

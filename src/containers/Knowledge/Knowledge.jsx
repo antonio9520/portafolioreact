@@ -116,9 +116,9 @@ const Knowledge = () => {
       <div className="cont-body-know">
         <Grid container>
           <Grid item xs={12} sm={12} md={12}>
-            <Typography className={collapse ? "title-know-active" : "title-know"} variant="h4">
+            <h2 className={collapse ? "title-know-active" : "title-know"} >
               Conocimientos
-            </Typography>
+            </h2>
             <div className={ collapse ? "show-btn-know-active" : "show-btn-know"}>
               <IconButton onClick={handleClick}>
                 {collapse ? (

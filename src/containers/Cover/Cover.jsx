@@ -6,7 +6,7 @@ import { DoubleArrow } from "@material-ui/icons";
 import { Link } from "react-scroll";
 
 const Cover = () => {
-  return (
+  return ( 
     <Fragment>
       <Grid container className="body" id="Inicio">
         <Grid container className="container-Info">

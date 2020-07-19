@@ -5,7 +5,7 @@ const proyectos = [
     titulo: "Portafolio React",
     descripcion:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada fermentum leo ut elementum. In sollicitudin condimentum ipsum sollicitudin vestibulum. In hac habitasse platea dictumst. In turpis diam, lobortis non ante sed, porta vulputate nisl.",
-    lenguajes: [],
+    lenguajes: ["js","css", "html", "mui"],
     proyectoURL: "www.proyecto.cl",
     imageURL: {image},
     gitURL: "www.git.cl",

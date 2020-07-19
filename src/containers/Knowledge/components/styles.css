@@ -58,6 +58,10 @@
 
 .typo-body-know {
     color: #555555;
+    font-size: 20px;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-style: italic;
+    margin: 0;
 }
 
 /***KnowItems***/
@@ -97,12 +101,23 @@
 
   .title-know-item{
     padding-bottom: 15px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    font-size: 2em;
+    margin: 0;
+    color: rgb(70, 70, 70);
   }
   .cont-avatar-know{
     display: inline-flex;
     position: relative;
     padding: 5px 10px;
     border-radius: 25px;
+    
+  }
+  .cont-avatar-know p{
+    font-size: 20px;
+    font-family: "Open Sans Condensed", sans-serif;
+    margin: 0;
     
   }
   .cont-items-know{

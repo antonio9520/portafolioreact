@@ -51,12 +51,11 @@ useEffect(() => {
 
         {/* <div className="overlay-job"></div> */}
         <div className="cont-body-job">
-          <Typography
-            variant="h4"
+          <h2
             className={collapse ? "job-title-active" : "job-title"}
           >
             Experiencia
-          </Typography>
+          </h2>
           <div className={collapse ? "cont-show-btn-active" : "cont-show-btn"}>
             <IconButton onClick={handleClick}>
               {collapse ? (

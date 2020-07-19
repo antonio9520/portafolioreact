@@ -10,5 +10,10 @@
 
 .title-proyect{
     padding-bottom: 100px;
-    color: #ffffff
+    padding-top: 50px;
+    color: #ffffff;
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    font-size: 3em;
+    margin: 0;
 }

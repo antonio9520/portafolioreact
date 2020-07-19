@@ -17,12 +17,15 @@ const CardExperience = (props) => {
           image={img}
           title={titulo}></CardMedia>
         <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
+          <h2 className="title-card-md">
             {titulo}
-          </Typography>
-          <Typography variant="body2" color="textSecondary">
+          </h2>
+          <p className="año-card-md">
+              2018-2020
+          </p>
+          <p className="desc-card-md">
               {descripcion}
-          </Typography>
+          </p>
         </CardContent>
       </CardActionArea>
     </Card>
