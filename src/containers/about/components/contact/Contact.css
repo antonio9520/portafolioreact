@@ -93,7 +93,7 @@
 
 .cont-card-contact {
   position: absolute;
- top: 0;
+ top: 150px;
  right: 40px;
   width: 310px;
   background: white;
@@ -112,6 +112,7 @@
 .cont-card-contact-inact {
   position: absolute;
   right: -500px;
+  top: 150px;
   background: white;
   display: inline-block;
   opacity: 0;
@@ -147,6 +148,9 @@
 @media (max-width: 600px){
   .titulo-contact-active {
       display: none;
+  }
+  .container-contacto{
+    display: none;
   }
   .cont-card-contact {
     position: absolute;

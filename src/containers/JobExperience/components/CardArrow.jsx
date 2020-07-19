@@ -43,27 +43,27 @@ const CardArrow = (props) => {
         ) : null}
 
         <div className={flip ? "card-back-active" : "card-back"}>
-          <Typography className="card-arrow-title" variant="h5">
+          <h2 className="card-arrow-title" >
             {title}
-          </Typography>
-          <Typography className="card-arrow-sub1" variant="subtitle1">
+          </h2>
+          <h2 className="card-arrow-sub1" >
             {sub1}
-          </Typography>
+          </h2>
         </div>
       </div>
       <div className="section-arrow">{props.children}</div>
       <div className="section-bottom">
         <div className="card-front"></div>
         <div className={flip ? "card-back-active" : "card-back"}>
-          <Typography className="card-arrow-year" variant="h5">
+          <p className="card-arrow-year" variant="h5">
             {year}
-          </Typography>
-          <Typography className="card-arrow-sub2" variant="subtitle2">
+          </p>
+          <p className="card-arrow-sub2" variant="subtitle2">
             {sub2}
-          </Typography>
-          <Typography className="card-arrow-body" variant="body2">
+          </p>
+          <p className="card-arrow-body" variant="body2">
             {body}
-          </Typography>
+          </p>
         </div>
       </div>
     </div>

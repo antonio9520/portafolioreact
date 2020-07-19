@@ -80,31 +80,53 @@
 /*typography*/
 .card-arrow-sub1 {
   color: white;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 1.5em;
+  margin: 0;
 }
 .card-arrow-title {
   color: white;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 2em;
+  margin: 0;
 }
 .card-arrow-year {
   padding-top: 10px;
   color: white;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  margin: 0;
 }
 .card-arrow-sub2 {
   padding-top: 10px;
   color: white;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  margin: 0;
+  font-style: italic;
 }
 .card-arrow-body {
   padding-top: 10px;
   padding-bottom: 40px;
   color: white;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  margin: 0;
+  font-style: italic;
 }
 
 /***Animation card***/
 .cont-icon {
   position: relative;
 }
-.card-front span:hover {
+.card-front span {
   transform: scale(1);
-  animation: pulse-black 2s infinite;
+  animation: pulse-black 2s infinite ease-in-out alternate;
 }
 
 .card-front {
@@ -114,6 +136,7 @@
   transition: all ease 0.5s;
   position: absolute;
   margin-left: 40%;
+ 
 }
 .card-front-active {
   color: white;
@@ -124,6 +147,7 @@
   margin-left: 40%;
   margin-top: -60px;
 }
+
 
 .card-back {
   backface-visibility: hidden;
@@ -213,14 +237,12 @@
 
 @keyframes pulse-black {
   0% {
-    transform: scale(0.95);
+    transform: scale(.9);
   }
 
-  70% {
-    transform: scale(1.3);
-  }
+ 
 
   100% {
-    transform: scale(0.95);
+    transform: scale(1.3);
   }
 }

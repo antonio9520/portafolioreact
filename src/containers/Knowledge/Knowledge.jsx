@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./Knowledge.css";
-import img from "../../resources/img/books.jpg";
-import { Grid, Typography, IconButton, Hidden } from "@material-ui/core";
+import { Grid, IconButton } from "@material-ui/core";
 import Categories from "./components/categories";
 import KnowItem from "./components/KnowItem";
 import {
@@ -93,7 +92,7 @@ const Knowledge = () => {
     },
     {
       avatar: "N",
-      typo: "Boostrap 4",
+      typo: "Photoshop",
       className: "avatar-novice",
     },
   ];

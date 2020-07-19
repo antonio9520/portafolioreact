@@ -17,6 +17,7 @@
   min-width: 100%;
 }
 
+
 .backImg img {
   position: absolute;
   min-width: 100%;
@@ -32,20 +33,14 @@
     filter: hue-rotate(360deg);
   }
 }
-
+.backImgxs{
+  display: none;
+}
 .hidden {
   display: none;
 }
 .primeraxs{
-  position: absolute;
-  animation-delay: .4s;
-  animation: movrl 4.4s infinite ease-in-out;
-  animation-direction: alternate;
-  left: -15px;
-  width: 110%;
-  bottom: -5px;
-  overflow: hidden;
-  height: 110%;
+display: none;
 }
 
 .primera {
@@ -157,12 +152,68 @@
   animation-duration: 5s;
 }
 
-@media only screen and (max-width: 600px) {
+@media  (max-width: 600px) {
 
+  .backImgxs{
+    position: fixed;
+    /* background: black; */
+    overflow: hidden;
+    animation: scale 10s linear infinite;
+    animation-direction: alternate;
+    bottom: 0;
+    top: 0;
+    height: 100vh;
+    min-width: 100%;
+    display: block;
+  }
+  .backImgxs img {
+    position: absolute;
+    min-width: 100%;
+    height: 100vh;
+    top: 0;
+  }
+  .backImg img {
+   display: none;
+  }
+  .backImg{
+    display: none;
+  }
+  .primeraxs{
+    position: absolute;
+    animation-delay: .4s;
+    animation: movrl 4.4s infinite ease-in-out;
+    animation-direction: alternate;
+    left: -15px;
+    width: 110%;
+    bottom: -5px;
+    overflow: hidden;
+    height: 110%;
+    display: block;
+  }
+  .primera {
+    display: none;
+  
+  }
+  .segunda {
+    display: none;
+  }
+  .tercera{
+    display: none;
+  }
+  .cuarta{
+    display: none;
+  }
+  .quinta{
+    display: none;
+  }
+  
+  .sexta{
+  display: none;
+  }
 
 }
 
-@media only screen and (min-width: 600px) and (max-width: 960px) {
+@media (min-width: 600px) and (max-width: 960px) {
  
 
   .cont-typo-about {
@@ -185,4 +236,8 @@
     display: inline-flex;
     flex-direction: row;
   }
+  .backImgxs{
+    display: none;
+  }
+
 }

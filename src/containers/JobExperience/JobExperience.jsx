@@ -49,7 +49,7 @@ useEffect(() => {
           <img className="img-job" alt="jobExp" src={image}></img>
         ) : null}
 
-        {/* <div className="overlay-job"></div> */}
+        <div className="overlay-job"></div> 
         <div className="cont-body-job">
           <h2
             className={collapse ? "job-title-active" : "job-title"}
