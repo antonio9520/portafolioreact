@@ -102,17 +102,9 @@ const Knowledge = () => {
   };
   return (
     <div className="container-Know" id="knowledge">
-     
+   
       <div className="overlay-know"></div>
-      {/* <CSSTransition classNames="transition-know"
-            in={collapse}
-            unmountOnExit
-            timeout={2000}>
-              <Hidden smDown>
-         <img className="img-know" src={img} alt="img-know"></img>
-         </Hidden>
-      </CSSTransition> */}
-
+ 
       <div className="cont-body-know">
         <Grid container>
           <Grid item xs={12} sm={12} md={12}>
@@ -138,7 +130,7 @@ const Knowledge = () => {
             <Grid container>
               <Grid item xs={12} sm={12} md={12}>
                 <div>
-                  <Categories />
+                  <Categories collapse={collapse}/>
                 </div>
               </Grid>
               <Grid item xs={12} sm={6} md={3} style={{ textAlign: "center" }}>
@@ -146,6 +138,8 @@ const Knowledge = () => {
                   title="Lenguajes"
                   icon={<Code className="icon-code" />}
                   list={languages}
+                  collapse={collapse}
+                  classKnow="uno"
                 />
               </Grid>
               <Grid item xs={12} sm={6} md={3} style={{ textAlign: "center" }}>
@@ -153,6 +147,8 @@ const Knowledge = () => {
                   title="Frameworks"
                   list={frameworks}
                   icon={<DeveloperBoard className="icon-code" />}
+                  collapse={collapse}
+                  classKnow="dos"
                 />
               </Grid>
               <Grid item xs={12} sm={6} md={3} style={{ textAlign: "center" }}>
@@ -160,6 +156,8 @@ const Knowledge = () => {
                   title="Base de Datos"
                   list={databases}
                   icon={<Storage className="icon-code" />}
+                  collapse={collapse}
+                  classKnow="tres"
                 />
               </Grid>
               <Grid item xs={12} sm={6} md={3} style={{ textAlign: "center" }}>
@@ -167,13 +165,15 @@ const Knowledge = () => {
                   title="Otros"
                   list={others}
                   icon={<DeviceHub className="icon-code" />}
+                  collapse={collapse}
+                  classKnow="cuatro"
                 />
               </Grid>
             </Grid>
           </CSSTransition>
         </Grid>
       </div>
-      <BtnLink p="" link="proyects"/>
+      <BtnLink p="" link="proyects" classBtn="btn-link-right"/>
     </div>
   );
 };

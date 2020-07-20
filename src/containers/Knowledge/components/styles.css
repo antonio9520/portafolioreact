@@ -11,6 +11,62 @@
   padding: 5px 10px;
   border-radius: 25px;
   z-index: 99;
+  opacity: 0;
+  animation: animateCategorie .5s ease-out forwards ;
+  animation-delay: 1.1s;
+  transition: .5s all;
+}
+
+.sub1{
+  animation: animateCategorie .5s ease-out forwards ;
+  animation-delay: 1.2s;
+}
+.sub2{
+  animation: animateCategorie .5s ease-out forwards ;
+  animation-delay: 1.3s;
+}
+.sub3{
+  animation: animateCategorie .5s ease-out forwards ;
+  animation-delay: 1.4s;
+}
+.sub4{
+  animation: animateCategorie .5s ease-out forwards ;
+  animation-delay: 1.5s;
+}
+.categories-inact{
+  display: inline-flex;
+  position: relative;
+  margin: 50px 10px 30px 10px;
+  padding: 5px 10px;
+  border-radius: 25px;
+  z-index: 99;
+  opacity: 0;
+  transition: .5s all;
+  animation: animateCategorie .5 reverse ease-out forwards;
+  
+}
+.categories-inact::before {
+  content: "";
+  background-color: white;
+  opacity: 0.7;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  border-radius: 25px;
+  z-index: -1;
+}
+@keyframes animateCategorie {
+  0%{
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% 
+  {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 .cont-categories-sub::before {
   content: "";
@@ -73,9 +129,60 @@
   padding: 5px 10px;
   border-radius: 10px;
   z-index: 99;
+  opacity: 0;
   display: inline-flex;
+ transition: .5s all;
 }
-
+.itemuno{
+  animation: knowAnimation .5s ease-out forwards;
+  animation-delay: 1.6s;
+}
+.itemdos{
+  animation: knowAnimation .5s ease-out forwards;
+  animation-delay: 1.7s;
+}
+.itemtres{
+  animation: knowAnimation .5s ease-out forwards;
+  animation-delay: 1.8s;
+}
+.itemcuatro{
+  animation: knowAnimation .5s ease-out forwards;
+  animation-delay: 1.9s;
+}
+.know-item-inact{
+  display: inline-flex;
+  position: relative;
+  margin: 80px 10px 30px 10px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  z-index: 99;
+  display: inline-flex;
+  animation: knowAnimation 1s reverse ease-out backwards;
+  opacity: 1;
+  transition: .5s all;
+}
+.know-item-inact::before {
+  content: "";
+  background-color: white;
+  opacity: 0.7;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  border-radius: 10px;
+  z-index: -1;
+}
+@keyframes knowAnimation{
+  0%{
+    transform: scale(.2);
+    opacity: 0;
+  }
+  100%{
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 .container-knowItem::before {
     content: "";
     background-color: white;

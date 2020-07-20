@@ -1,5 +1,6 @@
 .container-job {
   padding: 0;
+  
   background: rgb(51, 112, 65);
   background: radial-gradient(
     circle,
@@ -315,5 +316,13 @@
   .job-title-active{
     padding-top: 80px;
     padding-bottom: 50px;;
+  }
+}
+
+@media(max-width: 960px) and (min-width: 600px){
+  .container-job {
+    padding: 0;
+    
+    padding-bottom: 100px;
   }
 }

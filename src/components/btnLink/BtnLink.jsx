@@ -4,7 +4,7 @@ import { DoubleArrow } from "@material-ui/icons";
 import { Link } from "react-scroll";
 
 const btnLink = (props) => {
-    const { p, link } = props;
+    const { p, link, classBtn } = props;
     return (
         <div className="div-discover">
         <Link
@@ -16,7 +16,7 @@ const btnLink = (props) => {
           duration={500}
         >
           <p>{p}</p>
-          <DoubleArrow fontSize="large" className="icon" />
+          <DoubleArrow fontSize="large" className={classBtn} />
         </Link>
       </div>
     )

@@ -4,7 +4,7 @@ const proyectos = [
     _id: "1",
     titulo: "Portafolio React",
     descripcion:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada fermentum leo ut elementum. In sollicitudin condimentum ipsum sollicitudin vestibulum. In hac habitasse platea dictumst. In turpis diam, lobortis non ante sed, porta vulputate nisl.",
+      "Este proyecto esta construido con ReactJs, Material-ui para la estructura responsive, adémas de animaciones con Css3 y JavaScript",
     lenguajes: ["js","css", "html", "mui"],
     proyectoURL: "www.proyecto.cl",
     imageURL: {image},

@@ -9,7 +9,7 @@ import {
 } from "@material-ui/core";
 import { ExpandMore, GitHub, QueuePlayNext } from "@material-ui/icons";
 import LenguajeIcon from "./LenguajeIcon";
-import image from "../../../resources/img/portafolioimg.jpg"
+import image from "../../../resources/img/portafolioimg.jpg";
 
 const useStyles = makeStyles((theme) => ({
   expand: {
@@ -26,7 +26,6 @@ const useStyles = makeStyles((theme) => ({
 
 const CardProyect = ({ proyecto }) => {
   const {
-    imageURL,
     titulo,
     lenguajes,
     descripcion,

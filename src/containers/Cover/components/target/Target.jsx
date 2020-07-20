@@ -1,7 +1,6 @@
 import React from "react";
-import { Grid, makeStyles} from "@material-ui/core";
+import { Grid, makeStyles } from "@material-ui/core";
 import "./Target.css";
-import { Link } from "react-scroll";
 
 const style = {
   containerTarget: {
@@ -14,18 +13,16 @@ const style = {
 const useStyle = makeStyles(style);
 const Target = () => {
   const classes = useStyle();
-  return ( 
+  return (
     <Grid container justify="center" className={classes.containerTarget}>
       <Grid item xs={12} sm={12} md={10} className="itemTarget">
         <div className="card-cover">
           <div className="title-target">
-          <h2 className="target-hellow" >
-              Hola, soy
-            </h2>
-            <h2 className="target-name" >
+            <h2 className="target-hellow">Hola, soy</h2>
+            <h2 className="target-name">
               <span>A</span>braham <span>V</span>idal
             </h2>
-            <p class="line anim-typewriter">Desarrollador ReactJs......!!</p>
+            <p className="line anim-typewriter">Desarrollador FrontEnd.....!!</p>
           </div>
         </div>
       </Grid>

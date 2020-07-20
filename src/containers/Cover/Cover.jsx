@@ -13,7 +13,7 @@ const Cover = () => {
             <div className="vidContent">
               <Target />
             </div>
-            <BtnLink p="descubrir" link="scene"/>
+            <BtnLink p="descubrir" link="scene" classBtn="icon"/>
           </Grid>
         </Grid>
       </Grid>

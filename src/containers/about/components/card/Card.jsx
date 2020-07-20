@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./Card.css";
-import { Typography } from "@material-ui/core";
-import { CSSTransition } from "react-transition-group";
+
 const Card = (props) => {
   const { card } = props;
   const [open, setOpen] = useState(true);

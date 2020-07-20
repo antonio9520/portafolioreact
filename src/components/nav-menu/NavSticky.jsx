@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./style.css";
 import { Typography, Hidden, IconButton } from "@material-ui/core";
 import { Menu, DoubleArrow } from "@material-ui/icons";

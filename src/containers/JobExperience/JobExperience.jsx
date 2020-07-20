@@ -1,4 +1,4 @@
-import React, { useState, Fragment, useEffect, useRef } from "react";
+import React, { useState, Fragment,  useRef } from "react";
 import "./JobExperience.css";
 import { IconButton, Hidden } from "@material-ui/core";
 import { BtnLink } from "../../components";
@@ -16,10 +16,7 @@ const JobExperience = () => {
   const [time, setTime] = useState(false);
   const [collapse, setCollapse] = useState(true);
   const timeToClear = useRef(false);
-  useEffect(() => {
-    const scene = document.getElementById("scene");
-    console.log(scene);
-  });
+ 
   const changeImage = () => {
     // setImage(img);
     rotarImagen();
@@ -142,7 +139,7 @@ const JobExperience = () => {
             </CSSTransition>
           </Hidden>
         </div>
-        <BtnLink p="" link="knowledge"/>
+        <BtnLink p="" link="knowledge" classBtn="btn-link-right" />
       </div>
     </Fragment>
   );
