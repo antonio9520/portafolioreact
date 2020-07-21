@@ -22,7 +22,7 @@
         -webkit-transition: opacity cubic-bezier(0.4, 0, 0.2, 1) 436ms;
         -moz-transition: opacity cubic-bezier(0.4, 0, 0.2, 1) 436ms;
         transition: opacity cubic-bezier(0.4, 0, 0.2, 1) 436ms;
-        z-index: 9999;
+        z-index: 20000;
       }
       .insp-logo-frame {
         display: -webkit-flex;

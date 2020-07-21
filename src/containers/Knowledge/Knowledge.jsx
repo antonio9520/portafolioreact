@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Knowledge.css";
+import img from "../../resources/img/books.jpg";
 import { Grid, IconButton } from "@material-ui/core";
 import {BtnLink} from "../../components";
 import Categories from "./components/categories";
@@ -104,7 +105,12 @@ const Knowledge = () => {
     <div className="container-Know" id="knowledge">
    
       <div className="overlay-know"></div>
- 
+      <CSSTransition classNames="transition-know"
+            in={collapse}
+            unmountOnExit
+            timeout={2000}>
+         <img className="img-know" src={img} alt="img-know"></img>
+      </CSSTransition>
       <div className="cont-body-know">
         <Grid container>
           <Grid item xs={12} sm={12} md={12}>

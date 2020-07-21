@@ -23,6 +23,7 @@
   min-width: 100%;
   height: 100vh;
   top: 0;
+  overflow: hidden;
 }
 
 @keyframes scale {
@@ -171,6 +172,7 @@ display: none;
     min-width: 100%;
     height: 100vh;
     top: 0;
+    overflow: hidden;
   }
   .backImg img {
    display: none;

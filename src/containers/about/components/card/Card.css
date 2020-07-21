@@ -112,9 +112,10 @@
   position: absolute;
   bottom: 0;
   right: 30px;
-  animation: animsg 2s ease-in-out infinite;
+  animation: animsg 2s ease-in-out ;
   animation-direction: alternate;
-  animation-delay: 10s;
+  animation-delay: 2s;
+  animation-iteration-count: 4;
   opacity: 0;
 }
 @keyframes animsg{

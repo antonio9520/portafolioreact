@@ -27,13 +27,16 @@ const CardArrow = (props) => {
       onBlur={handleLeave}
     >
       <div className="section-top">
+        
         {icon ? (
           <div className="cont-icon">
+            
             <div className={flip ? "card-front-active" : "card-front"}>
+            
               <span>
                 <IconButton
                   className="animation-button"
-                  style={{ color: "white", border: "1px solid white" }}
+                 
                 >
                   {icon}
                 </IconButton>

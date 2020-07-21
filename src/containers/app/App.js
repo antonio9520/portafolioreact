@@ -48,8 +48,7 @@ class App extends Component {
     return (
       <div>
         <Cover />
-        <About
-          
+        <About  
           card={this.state.card}
           contact={this.state.contact}
         />

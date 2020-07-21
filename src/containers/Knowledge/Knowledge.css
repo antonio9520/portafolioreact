@@ -1,10 +1,9 @@
-.container-Know {
+/* .container-Know {
   width: 100%;
   min-height: 115vh;
   position: relative;
- 
+  
 }
-
 .img-know {
   height: 100%;
   width: 100%;
@@ -14,7 +13,6 @@
   background-position: center;
   position: absolute;
 }
-
 .cont-body-know {
   position: relative;
 }
@@ -47,6 +45,99 @@
   width: 100%;
   text-align: center;
   padding-bottom: 0px;
+  transition: 2s all ease;
+}
+.btn-show-job {
+  color: white;
+}
+/* 
+.overlay-know {
+  background: rgb(40, 49, 97);
+  background: radial-gradient(
+    circle,
+    rgba(40, 49, 97, 1) 0%,
+    rgba(17, 27, 17, 1) 100%
+  );
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* -webkit-box-shadow: 0px 21px 28px -8px #000000;
+    box-shadow: 0px 21px 28px -8px #000000;
+}
+
+
+
+.transition-know-enter {
+  opacity: 0;
+}
+
+.transition-know-enter-active {
+  opacity: 1;
+  transition: opacity 2000ms;
+}
+
+.transition-know-exit {
+  opacity: 1;
+}
+
+.transition-know-exit-active {
+  opacity: 0;
+  transition: opacity 2000ms;
+} */
+
+.container-Know {
+  width: 100%;
+  min-height: 115vh;
+  position: relative;
+}
+
+.cont-body-know {
+  position: relative;
+}
+
+.img-know {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  overflow: hidden;
+}
+
+.title-know {
+  padding-top: 20%;
+  color: white;
+  text-align: center;
+  transition: 2s all ease;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 3em;
+}
+.title-know-active {
+  padding-top: 3%;
+  padding-bottom: 0;
+  text-align: center;
+  color: white;
+  transition: 2s all ease;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 3em;
+}
+.show-btn-know {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  transition: 2s all ease;
+}
+.show-btn-know-active {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 20px;
   transition: 2s all ease;
 }
 .btn-show-job {
@@ -100,6 +191,9 @@
   }
   .container-Know{
     padding-bottom: 100px ;
+  }
+  .img-know {
+   display: none;
   }
 }
 
