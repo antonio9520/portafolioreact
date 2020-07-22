@@ -1,4 +1,4 @@
-import React, { useState, Fragment,  useRef } from "react";
+import React, { useState, Fragment, useRef, useEffect } from "react";
 import "./JobExperience.css";
 import { IconButton, Hidden } from "@material-ui/core";
 import { BtnLink } from "../../components";
@@ -10,13 +10,24 @@ import img2 from "../../resources/img/duoc.jpg";
 import duoc2 from "../../resources/img/duoc2.jpg";
 import duoc3 from "../../resources/img/duoc3.jpg";
 import CardExperience from "./mdUp/CardExperience";
+import arrow from "../../resources/img/arrow.png"
+import { Link } from "react-scroll";
 
-const JobExperience = () => {
+const JobExperience = (props) => {
+  const { experience } = props;
   const [image, setImage] = useState();
   const [time, setTime] = useState(false);
   const [collapse, setCollapse] = useState(true);
   const timeToClear = useRef(false);
- 
+
+  useEffect(() => {
+    if (experience) {
+      setCollapse(true);
+    } else {
+      setCollapse(false);
+    }
+  }, [experience]);
+
   const changeImage = () => {
     // setImage(img);
     rotarImagen();
@@ -60,63 +71,50 @@ const JobExperience = () => {
             </IconButton>
           </div>
           <Hidden smDown>
-            <CSSTransition
-              in={collapse}
-              unmountOnExit
-              timeout={2000}
-              classNames="lineJob"
-            >
-              <div>
-                <Grid container>
-                  <Grid item xs={2} sm={2} md={2}>
-                    <CardArrow>
-                      <LineStart />
-                    </CardArrow>
-                  </Grid>
-                  <Grid item xs={2} sm={2} md={2}>
-                    <CardArrow
-                      changeImage={changeImage}
-                      icon={<School />}
-                      image={image}
-                      title="I.P. Duoc UC."
-                      sub1="2 Años"
-                      year="2018"
-                      sub2="Estudiante Ingeniería en Informática"
-                      body=""
-                    >
-                      <LineItem />
-                    </CardArrow>
-                  </Grid>
-                  <Grid item xs={2} sm={2} md={2}>
-                    <CardArrow>
-                      <Line />
-                    </CardArrow>
-                  </Grid>
-                  <Grid item xs={2} sm={2} md={2}>
-                    <CardArrow>
-                      <Line />
-                    </CardArrow>
-                  </Grid>
-
-                  <Grid item xs={2} sm={2} md={2}>
-                    <CardArrow>
-                      <Line />
-                    </CardArrow>
-                  </Grid>
-                  <Grid
-                    item
-                    xs={2}
-                    sm={2}
-                    md={2}
-                    className="container-line-end"
-                  >
-                    <CardArrow>
-                      <LineEnd />
-                    </CardArrow>
-                  </Grid>
+            <div className={collapse ? "container-line-active" : "container-line"}>
+              <Grid container>
+                <Grid item xs={2} sm={2} md={2}>
+                  <CardArrow>
+                    <LineStart />
+                  </CardArrow>
                 </Grid>
-              </div>
-            </CSSTransition>
+                <Grid item xs={2} sm={2} md={2}>
+                  <CardArrow
+                    changeImage={changeImage}
+                    icon={<School />}
+                    image={image}
+                    title="I.P. Duoc UC."
+                    sub1="2 Años"
+                    year="2018"
+                    sub2="Estudiante Ingeniería en Informática"
+                    body=""
+                  >
+                    <LineItem />
+                  </CardArrow>
+                </Grid>
+                <Grid item xs={2} sm={2} md={2}>
+                  <CardArrow>
+                    <Line />
+                  </CardArrow>
+                </Grid>
+                <Grid item xs={2} sm={2} md={2}>
+                  <CardArrow>
+                    <Line />
+                  </CardArrow>
+                </Grid>
+
+                <Grid item xs={2} sm={2} md={2}>
+                  <CardArrow>
+                    <Line />
+                  </CardArrow>
+                </Grid>
+                <Grid item xs={2} sm={2} md={2} className="container-line-end">
+                  <CardArrow>
+                    <LineEnd />
+                  </CardArrow>
+                </Grid>
+              </Grid>
+            </div>
           </Hidden>
           <Hidden mdUp>
             <CSSTransition
@@ -139,7 +137,19 @@ const JobExperience = () => {
             </CSSTransition>
           </Hidden>
         </div>
-        <BtnLink p="" link="knowledge" classBtn="btn-link-right" />
+        <div className="arrow-about">
+      <Link
+          activeClass="active"
+          className="link"
+          to="knowledge"
+          spy={true}
+          offset={50}
+          duration={500}
+        >
+           <img src={arrow} alt="arrow"></img>
+        </Link>
+      
+      </div>
       </div>
     </Fragment>
   );

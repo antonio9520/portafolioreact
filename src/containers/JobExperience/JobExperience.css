@@ -13,7 +13,7 @@
   position: relative;
   min-height: 115vh;
  overflow: hidden;
- 
+  box-sizing: border-box;
 }
 .job-title {
   padding-top: 20%;
@@ -62,7 +62,7 @@
 .cont-show-btn {
   width: 100%;
   text-align: center;
-  padding-bottom: 300px;
+ 
   transition: 2s all ease;
 }
 .cont-show-btn-active {
@@ -75,7 +75,7 @@
   padding-right: 45px;
 }
 
-.container-line {
+.container-line-active {
   padding-bottom: 30px;
   opacity: 1;
   -webkit-transition: all 0.5s ease-in-out;
@@ -84,12 +84,18 @@
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-.container-line-active {
+
+.container-line{
+  display: none;
+}
+/* .container-line-active {
   opacity: 0;
+  display: none;
 }
 
 .lineJob-enter {
   opacity: 0;
+  display: none;
 }
 .lineJob-enter-active {
   opacity: 1;
@@ -103,7 +109,8 @@
 .lineJob-exit-active {
   opacity: 0;
   transition: opacity 2000ms;
-}
+  display: none;
+} */
 
 /**image**/
 .img-job {

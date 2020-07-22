@@ -124,8 +124,8 @@
   position: relative;
 }
 .card-front span {
-  transform: scale(1);
-  animation: pulse-black 2s infinite ease-in-out alternate;
+  /* transform: scale(1);
+  animation: pulse-black 2s infinite ease-in-out alternate; */
 }
 
 .card-front {
@@ -162,7 +162,14 @@
 .card-front .animation-button{
  color: white;
  border: 1px solid white;
- animation: animationBtnJob 3s ease-in-out infinite alternate;
+ animation: animationBtnJob .5s ease-in-out alternate forwards;
+animation-iteration-count: 10;
+}
+
+.card-front .animation-button:hover{
+ color: white;
+ border: 1px solid white;
+ opacity: 1;
 }
 .card-front-active .animation-button{
   color: white;
@@ -171,19 +178,10 @@
  }
 @keyframes animationBtnJob{
   0%{
-    border: 1px solid white;
-  }
-  25%{
-    border: 1px solid rgb(75, 202, 81);
-  }
-  50%{
-    border: 1px solid rgb(65, 157, 185);
-  }
-  75%{
-    border: 1px solid rgb(82, 52, 216);
+   opacity: 1;
   }
   100%{
-    border: 1px solid rgb(179, 22, 22);
+   opacity: .2;
   }
 }
 

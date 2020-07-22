@@ -9,6 +9,8 @@ class App extends Component {
     this.state = {
       card: "hidden",
       contact: "hidden",
+      experience: false,
+      knowledge: false,
     };
   }
   authenticate() {
@@ -30,6 +32,8 @@ class App extends Component {
   }
 
   handleAnimation = () => {
+    // console.log(document.documentElement.scrollTop)
+    //about
     if (document.documentElement.scrollTop > 500) {
       this.setState({
         card: "card-visible",
@@ -42,18 +46,40 @@ class App extends Component {
         contact: "hidden",
       });
     }
+    //experience
+    if (document.documentElement.scrollTop < 1400) {
+      this.setState({
+        experience: false,
+      });
+    }
+    if (document.documentElement.scrollTop > 1410) {
+      this.setState({
+        experience: true,
+        card: "hidden",
+        contact: "hidden",
+      });
+    }
+   
+    //knowledge
+    if (document.documentElement.scrollTop < 2130) {
+      this.setState({
+        knowledge: false,
+      });
+    }
+    if (document.documentElement.scrollTop > 2140) {
+      this.setState({
+        knowledge: true,
+      });
+    }
   };
 
   render() {
     return (
       <div>
         <Cover />
-        <About  
-          card={this.state.card}
-          contact={this.state.contact}
-        />
-        <JobExperience />
-        <Knowledge />
+        <About card={this.state.card} contact={this.state.contact} />
+        <JobExperience experience={this.state.experience} />
+        <Knowledge knowledge={this.state.knowledge} />
         <Proyects />
         <Footer />
       </div>

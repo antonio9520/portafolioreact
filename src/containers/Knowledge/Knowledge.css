@@ -92,6 +92,7 @@
   width: 100%;
   min-height: 115vh;
   position: relative;
+  overflow: hidden;
 }
 
 .cont-body-know {
@@ -109,7 +110,7 @@
   overflow: hidden;
 }
 
-.title-know {
+/* .title-know {
   padding-top: 20%;
   color: white;
   text-align: center;
@@ -117,7 +118,7 @@
   font-family: "Oswald", sans-serif;
   font-weight: 400;
   font-size: 3em;
-}
+} */
 .title-know-active {
   padding-top: 3%;
   padding-bottom: 0;
@@ -132,10 +133,12 @@
   width: 100%;
   position: relative;
   text-align: center;
+  padding-bottom: 20px;
   transition: 2s all ease;
 }
 .show-btn-know-active {
   width: 100%;
+  position: relative;
   text-align: center;
   padding-bottom: 20px;
   transition: 2s all ease;
@@ -163,7 +166,7 @@
 
 /***Transition***/
 
-.transition-know-enter {
+/* .transition-know-enter {
   opacity: 0;
 }
 
@@ -179,7 +182,7 @@
 .transition-know-exit-active {
   opacity: 0;
   transition: opacity 2000ms;
-}
+} */
 
 
 @media  (max-width: 600px) {

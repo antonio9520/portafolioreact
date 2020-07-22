@@ -1,78 +1,74 @@
-.div-discover{
+.div-discover {
+  position: absolute;
+  bottom: 50px;
+  right: 10px;
+  padding: 10px;
+  z-index: 10000;
+}
+
+.div-discover p {
+  position: absolute;
+  transform: rotate(-90deg);
+  color: white;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 2px;
+  padding: 10px;
+  font-size: 25px;
+  right: -33px;
+  bottom: 50px;
+}
+
+.icon {
+  margin-left: -20px;
+  color: #fff;
+  animation: iconAnimation 0.8s linear infinite;
+  animation-direction: alternate;
+}
+
+.btn-link-right {
+  transform: rotate(90deg);
+  color: white;
+  margin-bottom: 20px;
+  animation: iconAnimation 0.8s linear infinite;
+  animation-direction: alternate;
+}
+.btn-link-up {
+  transform: rotate(-90deg);
+  color: white;
+  margin-bottom: 20px;
+  animation: iconAnimationReverse 0.8s linear infinite;
+  animation-direction: alternate;
+}
+@keyframes iconAnimation {
+  0% {
+    transform: translateY(0) rotate(90deg);
+  }
+  100% {
+    transform: translateY(20px) rotate(90deg);
+  }
+}
+@keyframes iconAnimationReverse {
+  0% {
+    transform: translateY(20px) rotate(-90deg);
+  }
+  100% {
+    transform: translateY(0) rotate(-90deg);
+  }
+}
+
+@media (max-width: 600px) {
+  .div-discover {
     position: absolute;
-    bottom:50px;
+    bottom: 60px;
     right: 10px;
     padding: 10px;
-    z-index: 10000;
   }
-  
-  .div-discover p{
-    position: absolute;
-    transform: rotate(-90deg) ;
-    color: white;
-    font-family: "Oswald",sans-serif;
-    letter-spacing: 2px;
-    padding: 10px;
-    font-size:25px; 
-    right: -33px;
-    bottom: 50px;
-  }
-  
-  .icon{
-    margin-left: -20px;
-    color: #fff;
-     animation: iconAnimation .8s linear infinite;
-     animation-direction: alternate; 
-     
-  }
-
-  .btn-link-right{
-    transform: rotate(90deg);
-    color: white;
-    margin-bottom: 20px;
-    animation: iconAnimation .8s linear infinite;
-    animation-direction: alternate; 
+  .btn-link-right {
+    opacity: 1;
     
   }
-  .btn-link-up{
-    transform: rotate(-90deg);
-    color: white;
-    margin-bottom: 20px;
-    animation: iconAnimationReverse .8s linear infinite;
-    animation-direction: alternate; 
+  .btn-link-up {
+    opacity: 1;
+    margin-bottom: -40px;
   }
-  @keyframes iconAnimation {
-    0%{
-      transform: translateY(0) rotate(90deg);
-    }
-    100%{
-      transform: translateY(20px) rotate(90deg);
-    }
-  }
-  @keyframes iconAnimationReverse {
-    0%{
-      transform: translateY(20px) rotate(-90deg);
-    }
-    100%{
-      transform: translateY(0) rotate(-90deg);
-    }
-  }
-
-  
-@media (max-width: 600px){
-    .div-discover{
-      position: absolute;
-      bottom: 120px;
-      right: 10px;
-      padding: 10px;
-      
-    }
-    .btn-link-right{
-      opacity: 0;
-      
-    }
-    .btn-link-up{
-     opacity: 0;
-    }
-  }
-
+}

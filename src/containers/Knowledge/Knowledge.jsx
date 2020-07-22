@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Knowledge.css";
 import img from "../../resources/img/books.jpg";
-import { Grid, IconButton } from "@material-ui/core";
-import {BtnLink} from "../../components";
+import { Grid, IconButton, Hidden } from "@material-ui/core";
+import { BtnLink } from "../../components";
+import { languages, frameworks, databases, others } from "./data";
 import Categories from "./components/categories";
 import KnowItem from "./components/KnowItem";
+import arrow from "../../resources/img/arrow.png"
+import { Link } from "react-scroll";
 import {
   Code,
   Storage,
@@ -15,109 +18,31 @@ import {
 } from "@material-ui/icons";
 import { CSSTransition } from "react-transition-group";
 
-const Knowledge = () => {
+const Knowledge = (props) => {
+  const { knowledge } = props;
   const [collapse, setCollapse] = useState(false);
 
-  const languages = [
-    {
-      avatar: "I",
-      typo: "Javascript",
-      className: "avatar-int",
-    },
-    {
-      avatar: "I",
-      typo: "Html",
-      className: "avatar-int",
-    },
-    {
-      avatar: "I",
-      typo: "Css",
-      className: "avatar-int",
-    },
-    {
-      avatar: "N",
-      typo: "Sql",
-      className: "avatar-novice",
-    },
-  
-  ];
-  const databases = [
-    {
-      avatar: "N",
-      typo: "MongoDB",
-      className: "avatar-novice",
-    },
-    {
-      avatar: "N",
-      typo: "Sql server",
-      className: "avatar-novice",
-    },
-    {
-      avatar: "N",
-      typo: "Firebase",
-      className: "avatar-novice",
-    },
-  ];
-  const frameworks = [
-    {
-      avatar: "I",
-      typo: "ReactJs",
-      className: "avatar-int",
-    },
-    {
-      avatar: "N",
-      typo: "NodeJs",
-      className: "avatar-novice",
-    },
-    {
-      avatar: "N",
-      typo: "Express",
-      className: "avatar-novice",
-    },
-  ];
-
-  const others = [
-    {
-      avatar: "I",
-      typo: "GitHub",
-      className: "avatar-int",
-    },
-    {
-      avatar: "I",
-      typo: "Redux",
-      className: "avatar-int",
-    },
-    {
-      avatar: "I",
-      typo: "Material-ui",
-      className: "avatar-int",
-    },
-    {
-      avatar: "N",
-      typo: "Photoshop",
-      className: "avatar-novice",
-    },
-  ];
+  useEffect(() => {
+    if (knowledge) {
+      setCollapse(true);
+    } else {
+      setCollapse(false);
+    }
+  }, [knowledge]);
   const handleClick = () => {
     setCollapse(!collapse);
   };
   return (
     <div className="container-Know" id="knowledge">
-   
       <div className="overlay-know"></div>
-      <CSSTransition classNames="transition-know"
-            in={collapse}
-            unmountOnExit
-            timeout={2000}>
-         <img className="img-know" src={img} alt="img-know"></img>
-      </CSSTransition>
+      <img className="img-know" src={img} alt="img-know"></img>
       <div className="cont-body-know">
         <Grid container>
           <Grid item xs={12} sm={12} md={12}>
-            <h2 className={collapse ? "title-know-active" : "title-know"} >
-              Conocimientos
-            </h2>
-            <div className={ collapse ? "show-btn-know-active" : "show-btn-know"}>
+            <h2 className="title-know-active">Conocimientos</h2>
+            <div
+              className={collapse ? "show-btn-know-active" : "show-btn-know"}
+            >
               <IconButton onClick={handleClick}>
                 {collapse ? (
                   <VisibilityOff className="btn-show-job-off" />
@@ -127,59 +52,64 @@ const Knowledge = () => {
               </IconButton>
             </div>
           </Grid>
-          <CSSTransition
-            classNames="transition-know"
-            in={collapse}
-            unmountOnExit
-            timeout={2000}
-          >
-            <Grid container>
-              <Grid item xs={12} sm={12} md={12}>
-                <div>
-                  <Categories collapse={collapse}/>
-                </div>
-              </Grid>
-              <Grid item xs={12} sm={6} md={3} style={{ textAlign: "center" }}>
-                <KnowItem
-                  title="Lenguajes"
-                  icon={<Code className="icon-code" />}
-                  list={languages}
-                  collapse={collapse}
-                  classKnow="uno"
-                />
-              </Grid>
-              <Grid item xs={12} sm={6} md={3} style={{ textAlign: "center" }}>
-                <KnowItem
-                  title="Frameworks"
-                  list={frameworks}
-                  icon={<DeveloperBoard className="icon-code" />}
-                  collapse={collapse}
-                  classKnow="dos"
-                />
-              </Grid>
-              <Grid item xs={12} sm={6} md={3} style={{ textAlign: "center" }}>
-                <KnowItem
-                  title="Base de Datos"
-                  list={databases}
-                  icon={<Storage className="icon-code" />}
-                  collapse={collapse}
-                  classKnow="tres"
-                />
-              </Grid>
-              <Grid item xs={12} sm={6} md={3} style={{ textAlign: "center" }}>
-                <KnowItem
-                  title="Otros"
-                  list={others}
-                  icon={<DeviceHub className="icon-code" />}
-                  collapse={collapse}
-                  classKnow="cuatro"
-                />
-              </Grid>
+          <Grid container>
+            <Grid item xs={12} sm={12} md={12}>
+              <div>
+                <Categories collapse={collapse} />
+              </div>
             </Grid>
-          </CSSTransition>
+            <Grid item xs={12} sm={6} md={3} style={{ textAlign: "center" }}>
+              <KnowItem
+                title="Lenguajes"
+                icon={<Code className="icon-code" />}
+                list={languages}
+                collapse={collapse}
+                classKnow="uno"
+              />
+            </Grid>
+            <Grid item xs={12} sm={6} md={3} style={{ textAlign: "center" }}>
+              <KnowItem
+                title="Frameworks"
+                list={frameworks}
+                icon={<DeveloperBoard className="icon-code" />}
+                collapse={collapse}
+                classKnow="dos"
+              />
+            </Grid>
+            <Grid item xs={12} sm={6} md={3} style={{ textAlign: "center" }}>
+              <KnowItem
+                title="Base de Datos"
+                list={databases}
+                icon={<Storage className="icon-code" />}
+                collapse={collapse}
+                classKnow="tres"
+              />
+            </Grid>
+            <Grid item xs={12} sm={6} md={3} style={{ textAlign: "center" }}>
+              <KnowItem
+                title="Otros"
+                list={others}
+                icon={<DeviceHub className="icon-code" />}
+                collapse={collapse}
+                classKnow="cuatro"
+              />
+            </Grid>
+          </Grid>
         </Grid>
       </div>
-      <BtnLink p="" link="proyects" classBtn="btn-link-right"/>
+      <div className="arrow-about">
+      <Link
+          activeClass="active"
+          className="link"
+          to="proyects"
+          spy={true}
+          offset={50}
+          duration={500}
+        >
+           <img src={arrow} alt="arrow"></img>
+        </Link>
+      
+      </div>
     </div>
   );
 };

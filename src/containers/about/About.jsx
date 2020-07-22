@@ -7,6 +7,8 @@ import tercera from "../../resources/img/tercera.png";
 import cuarta from "../../resources/img/cuarta.png";
 import quinta from "../../resources/img/quinta.png";
 import sexta from "../../resources/img/sexta.png";
+import arrow from "../../resources/img/arrow.png"
+import { Link } from "react-scroll";
 import primeraxs from "../../resources/img/primeraxs.png";
 import "./About.css";
 import { Stars, Card, Contact } from "./components";
@@ -34,8 +36,8 @@ const About = (props) => {
 
       <Card card={card} />
       <Contact contact={contact} />
-      <BtnLink p="" link="experience" classBtn="btn-link-right" />
-      <Stars />
+     
+      {/* <Stars />
 
       <div>
         <img
@@ -85,6 +87,20 @@ const About = (props) => {
           style={{ zIndex: 1050 }}
           className="sexta"
         />
+      </div>  */}
+
+      <div className="arrow-about">
+      <Link
+          activeClass="active"
+          className="link"
+          to="experience"
+          spy={true}
+          offset={50}
+          duration={500}
+        >
+           <img src={arrow} alt="arrow"></img>
+        </Link>
+      
       </div>
     </div>
   );
